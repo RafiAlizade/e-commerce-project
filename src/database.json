@@ -48,13 +48,13 @@
     {
       "id": 4,
       "name": "Small Bookshelf",
-      "image": "./src/assets/products/small-bookshelf.svg",
+      "image": "./src/assets/products/bookshelfunsplash1.svg",
       "category": "homelifestyle",
       "price": 360,
       "bestselling": true,
-      "flashsale": false,
+      "flashsale": true,
       "discount": false,
-      "discountedPrice": 0,
+      "discountedPrice": 230,
       "discountRateDisplay": false,
       "discountRate": 0,
       "starCount": 5,
@@ -170,6 +170,53 @@
       "name": "Health & Beauty",
       "subname": "healthbeauty",
       "multipleCategory": false
+    }
+  ],
+  "browsecategory": [
+    {
+      "categoryName": "Phones",
+      "categoryBootstrapName" : "Phone",
+      "linkTo": "phones"
+    },
+    {
+      "categoryName": "Computers",
+      "categoryBootstrapName" : "Laptop",
+      "linkTo": "computers"
+    },
+    {
+      "categoryName": "Smartwatch",
+      "categoryBootstrapName" : "Smartwatch",
+      "linkTo": "smartwatch"
+    },
+    {
+      "categoryName": "Camera",
+      "categoryBootstrapName" : "Camera",
+      "linkTo": "camera"
+    },
+    {
+      "categoryName": "Headphones",
+      "categoryBootstrapName" : "Headphones",
+      "linkTo": "headphones"
+    },
+    {
+      "categoryName": "Gaming",
+      "categoryBootstrapName" : "Controller",
+      "linkTo": "gaming"
+    },
+    {
+      "categoryName": "Mouse",
+      "categoryBootstrapName" : "Mouse",
+      "linkTo": "mouse"
+    },
+    {
+      "categoryName": "TV",
+      "categoryBootstrapName" : "TV",
+      "linkTo": "tv"
+    },
+    {
+      "categoryName": "Webcam",
+      "categoryBootstrapName" : "Webcam",
+      "linkTo": "webcam"
     }
   ],
   "navlinks": [

@@ -1,0 +1,135 @@
+.categories__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 5rem;
+    padding-bottom: 5.5rem;
+    width: 100%;
+    gap: 3.7rem;
+}
+
+.categories__top {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.categories__text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.categories__span {
+    color: rgb(219, 68, 68);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.categories__browse {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.categories__h5 {
+    color: rgb(0, 0, 0);
+    font-family: Inter;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: 4%;
+    text-align: left;
+}
+
+.categories__buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    >button {
+        font-size: 1.3rem;
+        border-radius: 50%;
+        width: 2.88rem;
+        height: 2.88rem;
+        background: rgb(245, 245, 245);
+        border: none;
+        outline: none;
+    }
+}
+
+.slick-slider {
+    width: 100%;
+}
+
+.slick-slide {
+    margin: 0 10px; 
+    box-sizing: border-box;
+}
+
+.slick-list {
+    margin: 0 -10px; 
+    overflow: hidden; 
+}
+
+.categories__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.categories__href {
+    text-decoration: none;
+    height: 9.06rem;
+    border: 0.06rem solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.25rem;
+}
+
+.categories__icon {
+    font-size: 3.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.categories__name {
+color: rgb(0, 0, 0);
+font-family: Poppins;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5rem;
+letter-spacing: 0%;
+text-align: left;
+}
+.categories__box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.categories__bottom {
+    width: 100%;
+}
+
+.slick-slide {
+    width: 15%;
+}
