@@ -1,0 +1,226 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "The North Coat",
+      "image": "./assets/products/the-north-coat.svg",
+      "category": "mensfashion",
+      "price": 360,
+      "bestselling": true,
+      "discount": true,
+      "flashsale": false,
+      "discountedPrice": 260,
+      "discountRateDisplay": true,
+      "discountRate": 28,
+      "starCount": 5,
+      "feedbackCount": 65
+    },
+    {
+      "id": 2,
+      "name": "Gucci Duffle Bag",
+      "image": "./assets/products/gucci-duffle-bag.svg",
+      "category": "womansfashion",
+      "price": 1160,
+      "bestselling": true,
+      "flashsale": false,
+      "discount": true,
+      "discountedPrice": 960,
+      "discountRateDisplay": true,
+      "discountRate": 17,
+      "starCount": 4,
+      "feedbackCount": 54
+    },
+    {
+      "id": 3,
+      "name": "RGB Liquid CPU Cooler",
+      "image": "./assets/products/liquid-cpu-cooler.svg",
+      "category": "electronics",
+      "price": 170,
+      "bestselling": true,
+      "flashsale": false,
+      "discount": true,
+      "discountedPrice": 120,
+      "discountRateDisplay": true,
+      "discountRate": 29,
+      "starCount": 4,
+      "feedbackCount": 42
+    },
+    {
+      "id": 4,
+      "name": "Small Bookshelf",
+      "image": "./assets/products/small-bookshelf.svg",
+      "category": "homelifestyle",
+      "price": 360,
+      "bestselling": true,
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": false,
+      "discountRate": 0,
+      "starCount": 5,
+      "feedbackCount": 537
+    },
+    {
+      "id": 5,
+      "name": "HAVIT HV-G92 Gamepad",
+      "image": "./assets/products/g92-2-500x500-1.svg",
+      "category": "electronics",
+      "price": 160,
+      "bestselling": false,
+      "flashsale": true,
+      "discount": true,
+      "discountedPrice": 120,
+      "discountRateDisplay": true,
+      "discountRate": 25,
+      "starCount": 5,
+      "feedbackCount": 88
+    },
+    {
+      "id": 6,
+      "name": "AK-900 Wired Keyboard",
+      "image": "./assets/products/ak-900-01-500x500-1.svg",
+      "category": "electronics",
+      "price": 70,
+      "bestselling": false,
+      "flashsale": true,
+      "discount": true,
+      "discountedPrice": 40,
+      "discountRateDisplay": true,
+      "discountRate": 43,
+      "starCount": 4,
+      "feedbackCount": 75
+    },
+    {
+      "id": 7,
+      "name": "IPS LCD Gaming Monitor",
+      "image": "./assets/products/g27cq4-500x500-1.svg",
+      "category": "electronics",
+      "price": 400,
+      "bestselling": false,
+      "flashsale": true,
+      "discount": true,
+      "discountedPrice": 370,
+      "discountRateDisplay": true,
+      "discountRate": 8,
+      "starCount": 5,
+      "feedbackCount": 214
+    },
+    {
+      "id": 8,
+      "name": "S-Series Comfort Chair",
+      "image": "./assets/products/comfort-chair.svg",
+      "category": "homelifestyle",
+      "price": 400,
+      "bestselling": false,
+      "flashsale": true,
+      "discount": true,
+      "discountedPrice": 300,
+      "discountRateDisplay": true,
+      "discountRate": 25,
+      "starCount": 4,
+      "feedbackCount": 1024
+    }
+  ],
+  "categories": [
+    {
+      "name": "Woman's fashion",
+      "subname": "womansfashion",
+      "multipleCategory": true,
+      "multipleCategories": ["Tops", "Dresses", "Bottoms", "Outerwear", "Activewear", "Swimwear", "Lingerie", "Accessories", "Shoes", "Bags", "Jewelry"]
+    },
+    {
+      "name": "Men's fashion",
+      "subname": "mensfashion",
+      "multipleCategory": true,
+      "multipleCategories": ["Tops", "Bottoms", "Outerwear", "Activewear", "Swimwear", "Underwear", "Accessories", "Shoes", "Bags", "Jewelry"]
+    },
+    {
+      "name": "Electronics",
+      "subname": "electronics",
+      "multipleCategory": false
+    },
+    {
+      "name": "Home & Lifestyle",
+      "subname": "homelifestyle",
+      "multipleCategory": false
+    },
+    {
+      "name": "Medicine",
+      "subname": "medicine",
+      "multipleCategory": false
+    },
+    {
+      "name": "Sports & Outdoor",
+      "subname": "sportsoutdoor",
+      "multipleCategory": false
+    },
+    {
+      "name": "Baby's & Toys",
+      "subname": "babystoys",
+      "multipleCategory": false
+    },
+    {
+      "name": "Groceries & Pets",
+      "subname": "groceriespets",
+      "multipleCategory": false
+    },
+    {
+      "name": "Health & Beauty",
+      "subname": "healthbeauty",
+      "multipleCategory": false
+    }
+  ],
+  "navlinks": [
+    {
+      "name": "Home",
+      "url": "/",
+      "active": true
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "active": true
+    },
+    {
+      "name": "About",
+      "url": "/about",
+      "active": true
+    },
+    {
+      "name": "Sign up",
+      "url": "/signup",
+      "active": true
+    }
+  ],
+  "accounts": [
+    {
+      "firstName": "Yashar",
+      "lastName": "Azizov",
+      "email": "yasharrr@gmail.com",
+      "address": "Kingston, 5236, United State",
+      "isLoggedIn": true
+    }
+  ],
+  "slides" : [
+    {
+      "image" : "https://mobirise.com/extensions/commercem4/assets/images/1.jpg",
+      "textURL": "/apple-shop"
+    },
+    {
+      "image" : "https://plus.unsplash.com/premium_photo-1661546049594-a743a5a1f0b7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "textURL": "/unkownaddress"
+    },
+    {
+      "image" : "https://images.unsplash.com/photo-1671492247768-74f54774dbb2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "textURL": "/oils"
+    },
+    {
+      "image" : "https://images.unsplash.com/photo-1569961384048-0001b31bb6f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "textURL": "/waters"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1495753379358-73c76ccd644b?q=80&w=2139&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "textURL": "/unkownaddress"
+    }
+  ]
+}
