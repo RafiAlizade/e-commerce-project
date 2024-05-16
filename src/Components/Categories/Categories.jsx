@@ -1,4 +1,3 @@
-import React from 'react'
 import './Categories.css'
 import { ChevronRight } from 'react-bootstrap-icons'
 import { useState, useEffect } from "react";

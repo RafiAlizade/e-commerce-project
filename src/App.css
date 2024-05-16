@@ -49,3 +49,14 @@
     transform: translateX(-100%);
   }
 }
+
+@keyframes slideInButton {
+  from {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

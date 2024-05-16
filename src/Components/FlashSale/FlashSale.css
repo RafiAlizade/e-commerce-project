@@ -1,0 +1,325 @@
+.flashsale__inner {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+}
+
+.flashsale__top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.8rem;
+}
+
+.flashsale__daytext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flashsale__timer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "h2 timer empty buttons";
+}
+
+.redline {
+    width: 1.25rem;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    background: rgb(219, 68, 68);
+}
+
+.flashale__dayname {
+    color: rgb(219, 68, 68);
+    font-family: Poppins-Medium;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.flashale__h2 {
+    grid-area: h2;
+    color: rgb(0, 0, 0);
+    font-family: Inter;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: 4%;
+    text-align: left;
+}
+
+.flashsale__timer_box {
+    grid-area: timer;
+}
+
+.flashale__buttons {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+
+    >button {
+        font-size: 1.3rem;
+        border-radius: 50%;
+        width: 2.88rem;
+        height: 2.88rem;
+        background: rgb(245, 245, 245);
+        border: none;
+        outline: none;
+    }
+}
+
+.flashsale__bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.flashsale__allbutton {
+    padding: .75rem 2rem;
+    background: rgb(219, 68, 68);
+    /* Title/16PX Medium */
+    color: rgb(250, 250, 250);
+    font-family: Poppins-Regular;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.flashsale__timer_box ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    >li {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: .2rem;
+    }
+}
+
+.timer_text {
+    color: rgb(0, 0, 0);
+    font-family: Poppins-Medium;
+    font-size: 1rem;
+    line-height: 1.13rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+    /* Heading/32PX Bold */
+    color: rgb(0, 0, 0);
+    font-family: 'Inter';
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.88rem;
+    letter-spacing: 4%;
+    text-align: left;
+}
+
+.timer_blank {
+    color: rgb(219, 68, 68);
+    font-size: 3rem;
+}
+
+
+.star-yellow {
+    color: rgb(255, 173, 51);
+}
+
+.star-gray {
+    color: rgba(0, 0, 0, .25);
+}
+
+.flashsale__products {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.flashsale__box {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    height: 21.875;
+    position: relative;
+}
+
+.flashsale__discountprice {
+    z-index: 1001;
+    position: absolute;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    background: rgb(219, 68, 68);
+    border-radius: 0.25rem;
+    /* Title/12PX Regular */
+    color: rgb(250, 250, 250);
+    font-family: Poppins;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.13rem;
+    letter-spacing: 0%;
+    text-align: left;
+    top: .7rem;
+    left: .7rem;
+}
+
+.product__image {
+    width: 100%;
+    height: 15.63rem;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.product__description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .5rem;
+}
+
+.product__name {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.product__prices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .7rem;
+}
+
+.product_newprice {
+    color: rgb(219, 68, 68);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.product_oldprice {
+    color: rgba(0, 0, 0, .5);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration-line: line-through;
+}
+
+.product__star {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .1rem;
+    border-radius: 0.09rem;
+}
+
+.product_feedbacks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .6rem;
+}
+
+.product__feedcount {
+    color: rgba(0, 0, 0, .5);
+    font-family: Poppins;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.31rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.flashsale__buttons_abs {
+    z-index: 1002;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 2rem;
+    top: .7rem;
+
+    >button {
+        font-size: 1rem;
+        width: 2.13rem;
+        height: 2.13rem;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.flashsale__addcard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: .5rem 0;
+    background: rgb(0, 0, 0);
+    border-radius: 0rem 0rem 0.25rem 0.25rem;
+    border: none;
+    outline: none;
+color: rgb(255, 255, 255);
+font-family: Poppins;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5rem;
+letter-spacing: 0%;
+text-align: left;
+cursor: pointer;
+  display: none;
+}
+
+.flashsale__box:hover .flashsale__addcard {
+    bottom: 10px;
+    display: flex;
+    animation-duration: .4s;
+    animation-name: slideInButton;
+    animation-timing-function: ease-out;
+  }

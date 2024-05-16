@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "The North Coat",
-      "image": "./assets/products/the-north-coat.svg",
+      "image": "./src/assets/products/the-north-coat.svg",
       "category": "mensfashion",
       "price": 360,
       "bestselling": true,
@@ -18,7 +18,7 @@
     {
       "id": 2,
       "name": "Gucci Duffle Bag",
-      "image": "./assets/products/gucci-duffle-bag.svg",
+      "image": "./src/assets/products/gucci-duffle-bag.svg",
       "category": "womansfashion",
       "price": 1160,
       "bestselling": true,
@@ -33,7 +33,7 @@
     {
       "id": 3,
       "name": "RGB Liquid CPU Cooler",
-      "image": "./assets/products/liquid-cpu-cooler.svg",
+      "image": "./src/assets/products/liquid-cpu-cooler.svg",
       "category": "electronics",
       "price": 170,
       "bestselling": true,
@@ -48,7 +48,7 @@
     {
       "id": 4,
       "name": "Small Bookshelf",
-      "image": "./assets/products/small-bookshelf.svg",
+      "image": "./src/assets/products/small-bookshelf.svg",
       "category": "homelifestyle",
       "price": 360,
       "bestselling": true,
@@ -63,7 +63,7 @@
     {
       "id": 5,
       "name": "HAVIT HV-G92 Gamepad",
-      "image": "./assets/products/g92-2-500x500-1.svg",
+      "image": "./src/assets/products/g92-2-500x500 1.svg",
       "category": "electronics",
       "price": 160,
       "bestselling": false,
@@ -78,7 +78,7 @@
     {
       "id": 6,
       "name": "AK-900 Wired Keyboard",
-      "image": "./assets/products/ak-900-01-500x500-1.svg",
+      "image": "./src/assets/products/ak-900-01-500x500%201.svg",
       "category": "electronics",
       "price": 70,
       "bestselling": false,
@@ -93,7 +93,7 @@
     {
       "id": 7,
       "name": "IPS LCD Gaming Monitor",
-      "image": "./assets/products/g27cq4-500x500-1.svg",
+      "image": "./src/assets/products/g27cq4-500x500%201.svg",
       "category": "electronics",
       "price": 400,
       "bestselling": false,
@@ -108,7 +108,7 @@
     {
       "id": 8,
       "name": "S-Series Comfort Chair",
-      "image": "./assets/products/comfort-chair.svg",
+      "image": "./src/assets/products/comfort-chair.svg",
       "category": "homelifestyle",
       "price": 400,
       "bestselling": false,
@@ -117,7 +117,7 @@
       "discountedPrice": 300,
       "discountRateDisplay": true,
       "discountRate": 25,
-      "starCount": 4,
+      "starCount": 3,
       "feedbackCount": 1024
     }
   ],
@@ -137,7 +137,9 @@
     {
       "name": "Electronics",
       "subname": "electronics",
-      "multipleCategory": false
+      "multipleCategory": true,
+      "multipleCategories": ["Smartphones","Laptops","Tablets","Desktop Computers","Monitors","Computer Components","Networking Devices","Smart Home Devices","Audio & Video Equipment", "Wearable Technology","Camera & Photography","Video Games & Consoles","Drones","Office Electronics","Security & Surveillance","Car Electronics"
+      ]
     },
     {
       "name": "Home & Lifestyle",
