@@ -1,0 +1,187 @@
+.app__contact {
+    width: 100%;
+}
+
+.contact__inner {
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 8.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5rem;
+}
+
+.contact__pageline {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.contact__bold {
+    font-weight: 600;
+}
+
+.contact__bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10%;
+    justify-content: space-between;
+}
+
+.contact__left {
+    width: 25%;
+    border-radius: 0.25rem;
+    box-shadow: 0rem 0.06rem 0.81rem 0rem rgba(0, 0, 0, 0.2);
+    background: rgb(255, 255, 255);
+    padding: 2.5rem 2.2rem 3.1rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+}
+
+.contact__right {
+    width: 65%;
+    border-radius: 0.25rem;
+    box-shadow: 0rem 0.06rem 0.81rem 0rem rgba(0, 0, 0, 0.2);
+    background: rgb(255, 255, 255);
+    padding: 2.5rem 2rem;
+}
+
+.contact__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+}
+
+.contact__labels {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    > label {
+        width: 30%;
+    }
+}
+
+.contact__labels label input {
+    width: 100%;
+    padding-left: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.25rem;
+    background: rgb(235, 235, 235);
+    border: none;
+    outline: none;
+}
+
+.contact__textarea {
+    width: 100%;
+    resize: none;
+    height: 12.94rem;
+    border: none;
+    outline: none;
+    background: rgb(235, 235, 235);
+    /* Title/16PX Regular */
+    color: rgba(0, 0, 0);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 0.75rem 1rem;
+}
+
+.contact__line {
+    width: 100%;
+    border: 0.01rem solid rgba(0, 0, 0, 0.4);
+}
+
+.contact__button {
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: 0.25rem;
+    background: rgb(219, 68, 68);
+    color: rgb(250, 250, 250);
+    font-family: Poppins;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+.contact__call,
+.contact__write {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.call__top,
+.write__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.call__icon,
+.write__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgb(219, 68, 68);
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.write__bottom,
+.call__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.call__h5,
+.write__h5 {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.call__avaible,
+.call__phone,
+.write__contact,
+.write__c_email,
+.write__s_email {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.31rem;
+    letter-spacing: 0%;
+    text-align: left;
+}

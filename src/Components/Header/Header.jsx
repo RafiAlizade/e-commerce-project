@@ -9,7 +9,7 @@ import {
   BagDash,
   XCircle,
   Star,
-  BoxArrowLeft
+  BoxArrowLeft,
 } from "react-bootstrap-icons";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -20,15 +20,15 @@ function Header() {
   const [statusAccount, setStatusAccount] = useState(true);
 
   const changeStatusAccount = () => {
-    const menuContainer = document.querySelector('.header__account_menu')
+    const menuContainer = document.querySelector(".header__account_menu");
     if (statusAccount == true) {
-      setStatusAccount(false)
-      menuContainer.classList.toggle('close')
+      setStatusAccount(false);
+      menuContainer.classList.toggle("close");
     } else {
-      setStatusAccount(true)
-      menuContainer.classList.toggle('opened')
+      setStatusAccount(true);
+      menuContainer.classList.toggle("opened");
     }
-  }
+  };
 
   useEffect(() => {
     const getData = async () => {
@@ -68,7 +68,9 @@ function Header() {
 
         <div className="header__bottom">
           <div className="header__bottom_contained">
-            <h1 className="header__h1">Exlucisve</h1>
+            <Link to="/" className="header__href">
+              <h1 className="header__h1">Exlucisve</h1>
+            </Link>
             <nav className="header__nav">
               <ul className="header__navlist">
                 {navLink.map(({ name, url, active }, key) => (
@@ -112,35 +114,37 @@ function Header() {
                 </button>
 
                 <div className="header__acount_container">
-                  {account.map(
-                    (
-                      { isLoggedIn },
-                      key
-                    ) => (
-                      <button className="header__account_btn" onClick={changeStatusAccount} key={key}>
-                        {isLoggedIn ? <Person /> : ""}
-                      </button>
-                    )
-                  )}
+                  {account.map(({ isLoggedIn }, key) => (
+                    <button
+                      className="header__account_btn"
+                      onClick={changeStatusAccount}
+                      key={key}
+                    >
+                      {isLoggedIn ? <Person /> : ""}
+                    </button>
+                  ))}
 
-                  <div className="header__account_menu" style={ { display: statusAccount ? 'none' : 'flex'}}>
+                  <div
+                    className="header__account_menu"
+                    style={{ display: statusAccount ? "none" : "flex" }}
+                  >
                     <ul className="header__account_list">
                       <li>
                         <a href="#">
-                        <Person />
-                        <span>Manage My Account</span>
+                          <Person />
+                          <span>Manage My Account</span>
                         </a>
                       </li>
                       <li>
-                      <a href="#">
-                      <BagDash />
-                        <span>My Order</span>
-                      </a>
+                        <a href="#">
+                          <BagDash />
+                          <span>My Order</span>
+                        </a>
                       </li>
                       <li>
                         <a href="#">
-                            <XCircle />
-                            <span>My Cancellations</span>
+                          <XCircle />
+                          <span>My Cancellations</span>
                         </a>
                       </li>
                       <li>

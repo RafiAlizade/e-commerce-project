@@ -246,3 +246,6 @@
     animation: slideIn 0.5s ease-in-out;
 }
 
+.header__href {
+    text-decoration: none;
+}

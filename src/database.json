@@ -308,6 +308,40 @@
       "multipleCategory": false
     }
   ],
+  "personals": [
+    {
+      "name": "Tom Cruise",
+      "job": "Founder & Chairman",
+      "linkTwitter": "https://twitter.com/",
+      "linkInstagram": "https://instagram.com/",
+      "linkLinkedin": "https://linkedin.com/",
+      "photo": "./src/assets/personal/image46.svg" 
+    },
+    {
+      "name": "Emma Watson",
+      "job": "Managing Director",
+      "linkTwitter": "https://twitter.com/",
+      "linkInstagram": "https://instagram.com/",
+      "linkLinkedin": "https://linkedin.com/",
+      "photo": "./src/assets/personal/image51.svg" 
+    },
+    {
+      "name": "Will Smith",
+      "job": "Product Designer",
+      "linkTwitter": "https://twitter.com/",
+      "linkInstagram": "https://instagram.com/",
+      "linkLinkedin": "https://linkedin.com/",
+      "photo": "./src/assets/personal/image47.svg" 
+    },
+    {
+      "name": "Andrew Houston",
+      "job": "Product Manager",
+      "linkTwitter": "https://twitter.com/",
+      "linkInstagram": "https://instagram.com/",
+      "linkLinkedin": "https://linkedin.com/",
+      "photo": "./src/assets/personal/image46.svg" 
+    }
+  ],
   "featured": [
     {
       "name": "PlayStation 5",
