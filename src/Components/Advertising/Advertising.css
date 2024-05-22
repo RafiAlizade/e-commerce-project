@@ -1,0 +1,203 @@
+.app_advertising {
+    width: 100%;
+}
+
+.advertising__inner {
+    width: 100%;
+    height: 31.25rem;
+}
+
+.advertising__box {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.advertising__left {
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    width: 50%;
+    position: relative;
+    height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.advertising__top_box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+}
+
+.advertising__timer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    height: auto;
+}
+
+.advertising__timer ul li {
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3.88rem;
+    height: 3.88rem;
+    border-radius: 50%;
+}
+
+.advertising__timer ul li #hours {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.advertising__timer ul li #days {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.advertising__timer ul li #minutes {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.advertising__timer ul li #minutes {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.advertising__timer ul li #seconds {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+
+
+
+
+.advertising__timer ul li span:nth-child(2) {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 0.69rem;
+    font-weight: 400;
+    line-height: 1.13rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+.advertising_h5 {
+    color: rgb(0, 255, 102);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.advertising__name {
+    color: rgb(250, 250, 250);
+    font-family: Inter;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.75rem;
+    letter-spacing: 4%;
+    text-align: left;
+    width: 100%;
+}
+
+.advertising__right {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.advertising_bgblur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(217, 217, 217, 0.3);
+    filter: blur(12.5rem);
+    z-index: 3;
+}
+
+.advertising_buybtn {
+    padding: 1rem 3rem 1rem 3rem;
+    color: rgb(250, 250, 250);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    text-align: left;
+    border-radius: 0.25rem;
+    background: rgb(0, 255, 102);
+    text-decoration: none;
+    /* margin-top: 2.5rem; */
+}
+
+.advertising__image {
+    width: 80%;
+    z-index: 4;
+
+    >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.advertising__bottom_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}

@@ -1,0 +1,242 @@
+.app_explore {
+  width: 100%;
+}
+
+.explore__inner {
+  width: 100%;
+  padding-top: 4.3rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: start; */
+  gap: 3.8rem;
+}
+
+.explore__top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.2rem;
+}
+
+.explore__bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.explore__maintext {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.explore__href {
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 0.25rem;
+background: rgb(219, 68, 68);
+color: rgb(250, 250, 250);
+font-family: Poppins;
+font-size: 1rem;
+font-weight: 500;
+line-height: 1.5rem;
+letter-spacing: 0%;
+text-align: left;
+text-decoration: none;
+}
+
+.explore__span {
+  color: rgb(219, 68, 68);
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.explore__btnsection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.explore__h5 {
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 3rem;
+  letter-spacing: 4%;
+  text-align: left;
+}
+
+.explore__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+
+  >button {
+    font-size: 1.3rem;
+    border-radius: 50%;
+    width: 2.88rem;
+    height: 2.88rem;
+    background: rgb(245, 245, 245);
+    border: none;
+    outline: none;
+  }
+}
+
+
+.explore__products {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.explore__box {
+  /* width: 24%; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  height: 21.875;
+  position: relative;
+}
+
+.explore__discountprice {
+  z-index: 1001;
+  position: absolute;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  background: rgb(219, 68, 68);
+  border-radius: 0.25rem;
+  /* Title/12PX Regular */
+  color: rgb(250, 250, 250);
+  font-family: Poppins;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.13rem;
+  letter-spacing: 0%;
+  text-align: left;
+  top: .7rem;
+  left: .7rem;
+}
+
+.explore__buttons_abs {
+  z-index: 1002;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 2rem;
+  top: .7rem;
+
+  >button {
+    font-size: 1rem;
+    width: 2.13rem;
+    height: 2.13rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.explore__addcard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: .5rem 0;
+  background: rgb(0, 0, 0);
+  border-radius: 0rem 0rem 0.25rem 0.25rem;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0%;
+  text-align: left;
+  cursor: pointer;
+  display: none;
+}
+
+.explore__isnew {
+  top: 0;
+  position: absolute;
+  z-index: 1511;
+  border-radius: 0.25rem;
+  background: rgb(0, 255, 102);
+  top: .8rem;
+  left: .8rem;
+
+  > span {
+color: rgb(250, 250, 250);
+font-family: Poppins;
+font-size: 0.75rem;
+font-weight: 400;
+line-height: 1.13rem;
+letter-spacing: 0%;
+text-align: left;
+  }
+}
+
+.explore__box:hover .explore__addcard {
+  bottom: 10px;
+  display: flex;
+  animation-duration: .4s;
+  animation-name: slideInButton;
+  animation-timing-function: ease-out;
+}
+
+.product_price {
+color: rgb(219, 68, 68);
+font-family: Poppins;
+font-size: 1rem;
+font-weight: 500;
+line-height: 1.5rem;
+letter-spacing: 0%;
+text-align: left;
+}
+
+.explore__price_name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .6rem;
+}
+
+.slick-slider {
+  margin-bottom: 0; 
+}
+
+.slick-list {
+  padding: 0 ; 
+  margin: 0; 
+}
+
+.slick-slide {
+  margin: 0;
+}
+
+.explore__products {
+  padding-bottom: 0;
+}
+

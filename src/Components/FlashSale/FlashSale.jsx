@@ -54,7 +54,7 @@ function FlashSale() {
         if (products.length > 0) {
             const flashSaleProducts = products.filter(product => product.flashsale);
             const shuffledProducts = flashSaleProducts.sort(() => 0.3 - Math.random());
-            setRandomProducts(shuffledProducts.slice(0, 4));
+            setRandomProducts(shuffledProducts.slice(0, products.length));
         }
     }, [products]);
 
@@ -69,39 +69,38 @@ function FlashSale() {
     var settings = {
         dots: false,
         infinite: true,
-        speed: 400,
+        speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
+        initialSlide: 0,
+        adaptiveHeight: true,
         responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
             }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
         ]
-    };
+      };
 
     return (
         <section className="app_flashsale">
@@ -130,7 +129,7 @@ function FlashSale() {
                     <div className="flashsale__bottom">
                         <div className="flashsale__products">
                             <Slider ref={sliderRef} {...settings}>
-                                {randomProducts.map((product, index) => (
+                                {products.map((product, index) => (
                                     <div className="flashsale__box" key={index}>
                                         <div className="flashsale__discountprice">
                                             -{product.discountRate}%

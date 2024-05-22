@@ -13,6 +13,7 @@
       "discountRateDisplay": true,
       "discountRate": 28,
       "starCount": 5,
+      "isNew": false,
       "feedbackCount": 65
     },
     {
@@ -28,6 +29,7 @@
       "discountRateDisplay": true,
       "discountRate": 17,
       "starCount": 4,
+      "isNew": false,
       "feedbackCount": 54
     },
     {
@@ -43,6 +45,7 @@
       "discountRateDisplay": true,
       "discountRate": 29,
       "starCount": 4,
+      "isNew": false,
       "feedbackCount": 42
     },
     {
@@ -58,6 +61,7 @@
       "discountRateDisplay": false,
       "discountRate": 0,
       "starCount": 5,
+      "isNew": false,
       "feedbackCount": 537
     },
     {
@@ -66,13 +70,14 @@
       "image": "./src/assets/products/g92-2-500x500 1.svg",
       "category": "electronics",
       "price": 160,
-      "bestselling": false,
+      "bestselling": true,
       "flashsale": true,
       "discount": true,
       "discountedPrice": 120,
       "discountRateDisplay": true,
       "discountRate": 25,
       "starCount": 5,
+      "isNew": false,
       "feedbackCount": 88
     },
     {
@@ -81,13 +86,14 @@
       "image": "./src/assets/products/ak-900-01-500x500%201.svg",
       "category": "electronics",
       "price": 70,
-      "bestselling": false,
+      "bestselling": true,
       "flashsale": true,
       "discount": true,
       "discountedPrice": 40,
       "discountRateDisplay": true,
       "discountRate": 43,
       "starCount": 4,
+      "isNew": false,
       "feedbackCount": 75
     },
     {
@@ -96,13 +102,14 @@
       "image": "./src/assets/products/g27cq4-500x500%201.svg",
       "category": "electronics",
       "price": 400,
-      "bestselling": false,
+      "bestselling": true,
       "flashsale": true,
       "discount": true,
       "discountedPrice": 370,
       "discountRateDisplay": true,
       "discountRate": 8,
       "starCount": 5,
+      "isNew": false,
       "feedbackCount": 214
     },
     {
@@ -118,7 +125,136 @@
       "discountRateDisplay": true,
       "discountRate": 25,
       "starCount": 3,
+      "isNew": false,
       "feedbackCount": 1024
+    },
+    {
+      "id": 9,
+      "name": "Breed Dry Dog Food",
+      "image": "./src/assets/products/dogfood.svg",
+      "category": "homelifestyle",
+      "price": 100,
+      "bestselling": false,
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": true,
+      "discountRate": 35,
+      "starCount": 3,
+      "isNew": false,
+      "feedbackCount": 35
+    },
+    {
+      "id": 10,
+      "name": "CANON EOS DSLR Camera",
+      "image": "./src/assets/products/camera.svg",
+      "category": "electronics",
+      "price": 360,
+      "bestselling": false,
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": true,
+      "discountRate": 35,
+      "starCount": 4,
+      "isNew": false,
+      "feedbackCount": 95
+    },
+    {
+      "id": 11,
+      "name": "ASUS FHD Gaming Laptop",
+      "image": "./src/assets/products/gaminglaptop.svg",
+      "category": "electronics",
+      "price": 700,
+      "bestselling": false,
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": true,
+      "discountRate": 35,
+      "starCount": 5,
+      "isNew": false,
+      "feedbackCount": 325
+    },
+    {
+      "id": 12,
+      "name": "Curology Product Set ",
+      "image": "./src/assets/products/curologyproduct.svg",
+      "category": "medicine",
+      "price": 500,
+      "bestselling": false,
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": true,
+      "discountRate": 35,
+      "starCount": 4,
+      "isNew": false,
+      "feedbackCount": 145
+    },
+    {
+      "id": 13,
+      "name": "Kids Electric Car",
+      "image": "./src/assets/products/kidselectriccars.svg",
+      "category": "electronics",
+      "price": 960,
+      "bestselling": false,
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": true,
+      "discountRate": 35,
+      "starCount": 5,
+      "isNew": true,
+      "feedbackCount": 65
+    },
+    {
+      "id": 14,
+      "name": "Jr. Zoom Soccer Cleats",
+      "image": "./src/assets/products/copesense.svg",
+      "category": "mensfashion",
+      "price": 70,
+      "bestselling": false,
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": true,
+      "discountRate": 35,
+      "starCount": 5,
+      "isNew": false,
+      "feedbackCount": 35
+    },
+    {
+      "id": 15,
+      "name": "GP11 Shooter USB Gamepad",
+      "image": "./src/assets/products/gp11gamepad.svg",
+      "category": "electronics",
+      "price": 200,
+      "bestselling": false,
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": true,
+      "discountRate": 35,
+      "starCount": 4,
+      "isNew": true,
+      "feedbackCount": 55
+    },
+    {
+      "id": 16,
+      "name": "Quilted Satin Jacket",
+      "image": "./src/assets/products/satinjacket.svg",
+      "category": "mensfashion",
+      "price": 220,
+      "bestselling": false,
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": true,
+      "discountRate": 35,
+      "starCount": 4,
+      "isNew": false,
+      "feedbackCount": 55
     }
   ],
   "categories": [
@@ -170,6 +306,39 @@
       "name": "Health & Beauty",
       "subname": "healthbeauty",
       "multipleCategory": false
+    }
+  ],
+  "featured": [
+    {
+      "name": "PlayStation 5",
+      "description": "Black and White version of the PS5 coming out on sale.",
+      "adImage": "./src/assets/featured/Frame704.svg",
+      "linkTo": "./link"
+    },
+    {
+      "name": "Women’s Collections",
+      "description": "Featured woman collections that give you another vibe.",
+      "adImage": "./src/assets/featured/Frame7056.svg",
+      "linkTo": "./link"
+    },
+    {
+      "name": "Speakers",
+      "description": "Amazon wireless speakers",
+      "adImage": "./src/assets/featured/Frame707.svg",
+      "linkTo": "./link"
+    },
+    {
+      "name": "Perfume",
+      "description": "GUCCI INTENSE OUD EDP",
+      "adImage": "./src/assets/featured/Frame706.svg",
+      "linkTo": "./link"
+    }
+  ],
+  "advertising": [
+    {
+      "adTitle": "Enhance Your Music Experience",
+      "adLink": "/unkown",
+      "adImage": "./src/assets/products/adimage1.svg"
     }
   ],
   "browsecategory": [

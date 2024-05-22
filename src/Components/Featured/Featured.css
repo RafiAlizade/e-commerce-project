@@ -1,0 +1,211 @@
+.app__feature {
+    width: 100%;
+    height: auto;
+}
+
+.feature__inner {
+    padding-top: 9rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4rem;
+}
+
+.featured__top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.2rem;
+}
+
+.featured__text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.featured__span {
+    color: rgb(219, 68, 68);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.featured__h5 {
+    color: rgb(0, 0, 0);
+    font-family: Inter;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: 4%;
+    text-align: left;
+}
+
+.featured__bottom {
+    width: 100%;
+}
+
+.featured__bgfilter {
+    display: none;
+    height: 0%;
+    width: 0%;
+}
+
+.featured__container {
+    width: 100%;
+    height: 48rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.featured__texts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .5rem;
+}
+
+.featured__name {
+    color: rgb(250, 250, 250);
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    letter-spacing: 3%;
+    text-align: left;
+}
+
+.featured__href {
+color: rgb(255, 255, 255);
+font-family: Poppins;
+font-size: 1rem;
+font-weight: 500;
+line-height: 1.5rem;
+letter-spacing: 0%;
+text-align: left;
+text-underline-offset: .5rem;
+}
+
+.featured__description {
+    color: rgb(250, 250, 250);
+    font-family: Poppins;
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.31rem;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.featured__box:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-radius: 0.25rem;
+    background: rgb(0, 0, 0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    >img {
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        object-position: center;
+    }
+}
+
+.featured__box:nth-child(2) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: -1;
+    background: #0D0D0D;
+    position: relative;
+
+    >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.featured__box:nth-child(3) {
+    position: relative;
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border-radius: 0.25rem;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured__box:nth-child(3)>.featured__texts {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+
+.featured__box:nth-child(4)>.featured__texts {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+.featured__box:nth-child(2)>.featured__texts {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 1.5rem;
+}
+
+.featured__box:nth-child(1)>.featured__texts {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+
+
+/* .featured__box:nth-child(3) .featured__bgfilter {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur(18.75rem);
+    background: rgba(217, 217, 217, 0.9);
+}
+
+.featured__box:nth-child(4) .featured__bgfilter {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    filter: blur(18.75rem);
+    background: rgba(217, 217, 217, 0.9);
+} */
+
+.featured__box:nth-child(4) {
+    position: relative;
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    border-radius: 0.25rem;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

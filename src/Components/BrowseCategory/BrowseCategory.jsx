@@ -47,6 +47,7 @@ function BrowseCategory() {
         speed: 400,
         slidesToShow: 4,
         slidesToScroll: 1,
+        adaptiveHeight: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -60,7 +61,7 @@ function BrowseCategory() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: false
@@ -114,7 +115,7 @@ function BrowseCategory() {
                                     <Link to={category.linkTo} className="categories__href" key={index}>
                                         <div className="categories__box" key={index}>
                                                 <div className="categories__main">
-                                                <CategoryIcon className="categories__icon" />
+                                                <CategoryIcon className="bcategories__icon" />
                                         <span className="categories__name">
                                             {category.categoryName}
                                         </span>
