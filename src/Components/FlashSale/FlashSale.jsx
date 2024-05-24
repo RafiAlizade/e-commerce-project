@@ -1,5 +1,5 @@
 import "./FlashSale.css";
-import { useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import CountDown from "count-down-react";
 import { ArrowRightShort, ArrowLeftShort, StarFill, Heart, Eye } from 'react-bootstrap-icons';
 import { Link } from "react-router-dom";
@@ -7,8 +7,9 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { addToWishlist, removeFromWishlist, getWishlist } from './../../utils/wishlistUtils';
 
-const CountdownRenderer = ({ days, hours, minutes, seconds, completed }) => {
+const CountdownRenderer = ({ days, hours, minutes, seconds }) => {
     return (
         <ul>
             <li>
@@ -38,6 +39,7 @@ function FlashSale() {
     const date1 = Date.now() + 37 * 60 * 60 * 1000;
     const [products, setProducts] = useState([]);
     const [randomProducts, setRandomProducts] = useState([]);
+    const [wishlist, setWishlist] = useState([]);
 
     const sliderRef = useRef(null);
 
@@ -50,6 +52,19 @@ function FlashSale() {
         getFlashProduct();
     }, []);
 
+    const handleAddToWishlist = (product) => {
+        const wishlist = getWishlist();
+        const isProductInWishlist = wishlist.some(item => item.id === product.id);
+
+        if (isProductInWishlist) {
+            removeFromWishlist(product.id);
+            setWishlist(wishlist.filter(item => item.id !== product.id));
+        } else {
+            addToWishlist(product);
+            setWishlist([...wishlist, product]);
+        }
+    };
+
     useEffect(() => {
         if (products.length > 0) {
             const flashSaleProducts = products.filter(product => product.flashsale);
@@ -58,15 +73,19 @@ function FlashSale() {
         }
     }, [products]);
 
+    useEffect(() => {
+        setWishlist(getWishlist());
+    }, [products]);
+
     const nextSlide = () => {
-      sliderRef.current.slickNext();
-    };
-  
-    const prevSlide = () => {
-      sliderRef.current.slickPrev();
+        sliderRef.current.slickNext();
     };
 
-    var settings = {
+    const prevSlide = () => {
+        sliderRef.current.slickPrev();
+    };
+
+    const settings = {
         dots: false,
         infinite: true,
         speed: 500,
@@ -75,32 +94,32 @@ function FlashSale() {
         initialSlide: 0,
         adaptiveHeight: true,
         responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
         ]
-      };
+    };
 
     return (
         <section className="app_flashsale">
@@ -129,45 +148,48 @@ function FlashSale() {
                     <div className="flashsale__bottom">
                         <div className="flashsale__products">
                             <Slider ref={sliderRef} {...settings}>
-                                {products.map((product, index) => (
-                                    <div className="flashsale__box" key={index}>
-                                        <div className="flashsale__discountprice">
-                                            -{product.discountRate}%
-                                        </div>
-                                        <div className="flashsale__buttons_abs">
-                                            <button className="flashsale__wishlist_btn">
-                                                <Heart />
-                                            </button>
-                                            <button className="flashsale__show_btn">
-                                                <Eye />
-                                            </button>
-                                        </div>
-                                        <div className="product__image">
-                                            <img src={product.image} />
-                                            <button className="flashsale__addcard">Add To Cart</button>
-                                        </div>
-                                        <div className="product__description">
-                                            <h5 className="product__name">{product.name}</h5>
-                                            <div className="product__prices">
-                                                <span className="product_newprice">${product.discountedPrice}</span>
-                                                <span className="product_oldprice">${product.price}</span>
+                                {products.map((product, index) => {
+                                    const isInWishlist = wishlist.some(item => item.id === product.id);
+                                    return (
+                                        <div className="flashsale__box" key={index}>
+                                            <div className="flashsale__discountprice">
+                                                -{product.discountRate}%
                                             </div>
-                                            <div className="product_feedbacks">
-                                                <div className="product__star">
-                                                    {[...Array(5)].map((_, starIndex) => (
-                                                        <StarFill
-                                                            key={starIndex}
-                                                            className={starIndex < product.starCount ? 'star-yellow' : 'star-gray'}
-                                                        />
-                                                    ))}
+                                            <div className="flashsale__buttons_abs">
+                                                <button className="flashsale__wishlist_btn" style={{ backgroundColor: isInWishlist ? 'rgb(219, 68, 68)' : 'rgb(255, 255, 255)', color: isInWishlist ? '#fff' : '#000' , transition: 'ease-in-out .2s'  }} onClick={() => handleAddToWishlist(product)}>
+                                                    <Heart />
+                                                </button>
+                                                <button className="flashsale__show_btn">
+                                                    <Eye />
+                                                </button>
+                                            </div>
+                                            <div className="product__image">
+                                                <img src={product.image} alt={product.name} />
+                                                <button className="flashsale__addcard">Add To Cart</button>
+                                            </div>
+                                            <div className="product__description">
+                                                <h5 className="product__name">{product.name}</h5>
+                                                <div className="product__prices">
+                                                    <span className="product_newprice">${product.discountedPrice}</span>
+                                                    <span className="product_oldprice">${product.price}</span>
                                                 </div>
-                                                <span className="product__feedcount">
-                                                    ({product.feedbackCount})
-                                                </span>
+                                                <div className="product_feedbacks">
+                                                    <div className="product__star">
+                                                        {[...Array(5)].map((_, starIndex) => (
+                                                            <StarFill
+                                                                key={starIndex}
+                                                                className={starIndex < product.starCount ? 'star-yellow' : 'star-gray'}
+                                                            />
+                                                        ))}
+                                                    </div>
+                                                    <span className="product__feedcount">
+                                                        ({product.feedbackCount})
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </Slider>
                         </div>
                         <Link to="/link" className="flashsale__allbutton">View all products</Link>

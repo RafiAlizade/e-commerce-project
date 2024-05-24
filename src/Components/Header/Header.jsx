@@ -12,12 +12,14 @@ import {
   BoxArrowLeft,
 } from "react-bootstrap-icons";
 import { useState, useEffect } from "react";
+import { getWishlist } from './../../utils/wishlistUtils';
 import axios from "axios";
 
 function Header() {
   const [navLink, setNavLink] = useState([]);
   const [account, setAccount] = useState([]);
   const [statusAccount, setStatusAccount] = useState(true);
+  const [wishlistTable, setWishlistTable] = useState([]);
 
   const changeStatusAccount = () => {
     const menuContainer = document.querySelector(".header__account_menu");
@@ -44,6 +46,20 @@ function Header() {
     getData();
     getAccount();
   }, []);
+
+  useEffect(() => {
+    const updateWishlist = () => {
+      setWishlistTable(getWishlist());
+    };
+
+    updateWishlist();
+
+    const intervalId = setInterval(updateWishlist, 100);
+
+    return () => clearInterval(intervalId);
+
+  }, []);
+
 
   return (
     <header className="main__header">
@@ -103,7 +119,9 @@ function Header() {
                 <button className="header__wishlist_btn">
                   <Link to="/wishlist">
                     <Heart />
-                    {/* <span className="count__wish">0</span> */}
+                    <span className={wishlistTable.length > 0 ? 'count__wish' : '' }>
+                      {wishlistTable.length > 0 ? wishlistTable.length : ''}
+                    </span>
                   </Link>
                 </button>
 

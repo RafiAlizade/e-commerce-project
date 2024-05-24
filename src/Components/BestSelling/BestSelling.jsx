@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { StarFill, Heart, Eye } from 'react-bootstrap-icons';
+import { addToWishlist, removeFromWishlist, getWishlist } from './../../utils/wishlistUtils';
 
 
 function BestSelling() {
     const [bestSelling, setGetBestSelling] = useState([]);
     const [randomProducts, setRandomProducts] = useState([]);
+    const [selected, setSelected] = useState(false);
+    const [wishlist, setWishlist] = useState([]);
 
     useEffect(() => {
         const getBestSelling = async () => {
@@ -25,6 +28,23 @@ function BestSelling() {
             const shuffledProducts = flashSaleProducts.sort(() => 0.3 - Math.random());
             setRandomProducts(shuffledProducts.slice(0, 4));
         }
+    }, [bestSelling]);
+
+    const handleAddToWishlist = (product) => {
+        const wishlist = getWishlist();
+        const isProductInWishlist = wishlist.some(item => item.id === product.id);
+
+        if (isProductInWishlist) {
+            removeFromWishlist(product.id);
+            setWishlist(wishlist.filter(item => item.id !== product.id));
+        } else {
+            addToWishlist(product);
+            setWishlist([...wishlist, product]);
+        }
+    };
+
+    useEffect(() => {
+        setWishlist(getWishlist());
     }, [bestSelling]);
 
 
@@ -52,14 +72,18 @@ function BestSelling() {
 
                 <div className="bestselling__bottom">
                     <div className="bestselling__container">
-                    {randomProducts.map((product, index) => (
-                        <Link to={product.id.toString()} key={index} className='bestselling__href'>
+                    {randomProducts.map((product, index) => {
+
+const isInWishlist = wishlist.some(item => item.id === product.id);
+
+return (
+                        
                             <div className="bestselling__box" key={index}>
                                         <div className="bestselling__discountprice">
                                             -{product.discountRate}%
                                         </div>
                                         <div className="bestselling__buttons_abs">
-                                            <button className="bestselling__wishlist_btn">
+                                            <button className="bestselling__wishlist_btn" style={{ backgroundColor: isInWishlist ? 'rgb(219, 68, 68)' : 'rgb(255, 255, 255)', color: isInWishlist ? '#fff' : '#000' , transition: 'ease-in-out .2s'  }} onClick={() => handleAddToWishlist(product)}>
                                                 <Heart />
                                             </button>
                                             <button className="bestselling__show_btn">
@@ -91,8 +115,7 @@ function BestSelling() {
                                             </div>
                                         </div>
                                     </div>
-                        </Link>
-                    ))}
+                    )})}
                     </div>
                 </div>
             </div>

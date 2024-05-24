@@ -88,13 +88,8 @@
     justify-content: space-between;
 }
 
-.bestselling__href {
-    width: 24%;
-    text-decoration: none;
-}
-
 .bestselling__box {
-    width: 100%;
+    width: 24%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -109,7 +104,6 @@
     padding: 0.25rem 0.75rem 0.25rem 0.75rem;
     background: rgb(219, 68, 68);
     border-radius: 0.25rem;
-    /* Title/12PX Regular */
     color: rgb(250, 250, 250);
     font-family: Poppins;
     font-size: 0.75rem;
@@ -223,9 +217,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: #000;
     }
 }
-
 .bestselling__addcard {
     display: flex;
     flex-direction: row;

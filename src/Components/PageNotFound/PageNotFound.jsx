@@ -8,7 +8,7 @@ function PageNotFound() {
             <div className="notfound__inner">
                 <div className="notfound__top">
                 <span className="notfound__pageline">
-                            Home &nbsp; / &nbsp;  <span className="notfound__bold">Contact</span>
+                            Home &nbsp; / &nbsp;  <span className="notfound__bold">404 Not Found</span>
                         </span>
                 </div>
 

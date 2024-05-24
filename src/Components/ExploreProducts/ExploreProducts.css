@@ -94,6 +94,7 @@ text-decoration: none;
 }
 
 
+
 .explore__products {
   width: 100%;
   display: flex;
@@ -151,6 +152,8 @@ text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #000;
+    transition: ease-in-out .2s;
   }
 }
 

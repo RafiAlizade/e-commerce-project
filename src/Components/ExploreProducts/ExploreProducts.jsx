@@ -6,10 +6,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ArrowRightShort, ArrowLeftShort, StarFill, Heart, Eye, Columns } from 'react-bootstrap-icons';
+import { addToWishlist, removeFromWishlist, getWishlist } from './../../utils/wishlistUtils';
 
 function ExploreProducts() {
   const [products, setProducts] = useState([]);
   const [randomProducts, setRandomProducts] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
   const sliderRef = useRef(null);
   const nextSlide = () => {
@@ -27,7 +29,24 @@ useEffect(() => {
   }
 
   getProducts();
-})
+}, [])
+
+const handleAddToWishlist = (product) => {
+  const wishlist = getWishlist();
+  const isProductInWishlist = wishlist.some(item => item.id === product.id);
+
+  if (isProductInWishlist) {
+      removeFromWishlist(product.id);
+      setWishlist(wishlist.filter(item => item.id !== product.id));
+  } else {
+      addToWishlist(product);
+      setWishlist([...wishlist, product]);
+  }
+};
+
+useEffect(() => {
+  setWishlist(getWishlist());
+}, [products]);
 
 const settings = {
   dots: false
@@ -70,7 +89,9 @@ const settings = {
           <div className="explore__bottom">
             <div className="explore__products">
             <Slider ref={sliderRef} {...settings}>
-            {products.map((product, index) => (
+            {products.map((product, index) => {
+
+const isInWishlist = wishlist.some(item => item.id === product.id); return (
                 <div className="explore__box" key={index}>
                 <div className="explore__isnew" style={product.isNew ? { padding: '0.25rem 0.75rem' } : {}}>
                     <span>
@@ -78,7 +99,7 @@ const settings = {
                     </span>
                 </div>
                 <div className="explore__buttons_abs">
-                    <button className="explore__wishlist_btn">
+                    <button className="explore__wishlist_btn" style={{ backgroundColor: isInWishlist ? 'rgb(219, 68, 68)' : 'rgb(255, 255, 255)', color: isInWishlist ? '#fff' : '#000' , transition: 'ease-in-out .2s'  }} onClick={() => handleAddToWishlist(product)}>
                         <Heart />
                     </button>
                     <button className="explore__show_btn">
@@ -110,7 +131,7 @@ const settings = {
                     </div>
                 </div>
             </div>
-              ))}
+              )})}
               </Slider>
             </div>
 
