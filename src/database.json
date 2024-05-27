@@ -14,7 +14,9 @@
       "discountRate": 28,
       "starCount": 5,
       "isNew": false,
-      "feedbackCount": 65
+      "feedbackCount": 65,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 2,
@@ -30,7 +32,9 @@
       "discountRate": 17,
       "starCount": 4,
       "isNew": false,
-      "feedbackCount": 54
+      "feedbackCount": 54,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 3,
@@ -46,7 +50,9 @@
       "discountRate": 29,
       "starCount": 4,
       "isNew": false,
-      "feedbackCount": 42
+      "feedbackCount": 42,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 4,
@@ -62,7 +68,9 @@
       "discountRate": 0,
       "starCount": 5,
       "isNew": false,
-      "feedbackCount": 537
+      "feedbackCount": 537,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 5,
@@ -78,7 +86,9 @@
       "discountRate": 25,
       "starCount": 5,
       "isNew": false,
-      "feedbackCount": 88
+      "feedbackCount": 88,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 6,
@@ -94,7 +104,9 @@
       "discountRate": 43,
       "starCount": 4,
       "isNew": false,
-      "feedbackCount": 75
+      "feedbackCount": 75,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 7,
@@ -110,7 +122,9 @@
       "discountRate": 8,
       "starCount": 5,
       "isNew": false,
-      "feedbackCount": 214
+      "feedbackCount": 214,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 8,
@@ -126,7 +140,9 @@
       "discountRate": 25,
       "starCount": 3,
       "isNew": false,
-      "feedbackCount": 1024
+      "feedbackCount": 1024,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 9,
@@ -142,7 +158,9 @@
       "discountRate": 35,
       "starCount": 3,
       "isNew": false,
-      "feedbackCount": 35
+      "feedbackCount": 35,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 10,
@@ -158,7 +176,9 @@
       "discountRate": 35,
       "starCount": 4,
       "isNew": false,
-      "feedbackCount": 95
+      "feedbackCount": 95,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 11,
@@ -174,7 +194,9 @@
       "discountRate": 35,
       "starCount": 5,
       "isNew": false,
-      "feedbackCount": 325
+      "feedbackCount": 325,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 12,
@@ -190,7 +212,9 @@
       "discountRate": 35,
       "starCount": 4,
       "isNew": false,
-      "feedbackCount": 145
+      "feedbackCount": 145,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 13,
@@ -206,7 +230,9 @@
       "discountRate": 35,
       "starCount": 5,
       "isNew": true,
-      "feedbackCount": 65
+      "feedbackCount": 65,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 14,
@@ -222,7 +248,9 @@
       "discountRate": 35,
       "starCount": 5,
       "isNew": false,
-      "feedbackCount": 35
+      "feedbackCount": 35,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 15,
@@ -238,7 +266,9 @@
       "discountRate": 35,
       "starCount": 4,
       "isNew": true,
-      "feedbackCount": 55
+      "feedbackCount": 55,
+      "subtotal": 0,
+      "quantity": 1
     },
     {
       "id": 16,
@@ -254,7 +284,9 @@
       "discountRate": 35,
       "starCount": 4,
       "isNew": false,
-      "feedbackCount": 55
+      "feedbackCount": 55,
+      "subtotal": 0,
+      "quantity": 1
     }
   ],
   "categories": [
@@ -262,19 +294,58 @@
       "name": "Woman's fashion",
       "subname": "womansfashion",
       "multipleCategory": true,
-      "multipleCategories": ["Tops", "Dresses", "Bottoms", "Outerwear", "Activewear", "Swimwear", "Lingerie", "Accessories", "Shoes", "Bags", "Jewelry"]
+      "multipleCategories": [
+        "Tops",
+        "Dresses",
+        "Bottoms",
+        "Outerwear",
+        "Activewear",
+        "Swimwear",
+        "Lingerie",
+        "Accessories",
+        "Shoes",
+        "Bags",
+        "Jewelry"
+      ]
     },
     {
       "name": "Men's fashion",
       "subname": "mensfashion",
       "multipleCategory": true,
-      "multipleCategories": ["Tops", "Bottoms", "Outerwear", "Activewear", "Swimwear", "Underwear", "Accessories", "Shoes", "Bags", "Jewelry"]
+      "multipleCategories": [
+        "Tops",
+        "Bottoms",
+        "Outerwear",
+        "Activewear",
+        "Swimwear",
+        "Underwear",
+        "Accessories",
+        "Shoes",
+        "Bags",
+        "Jewelry"
+      ]
     },
     {
       "name": "Electronics",
       "subname": "electronics",
       "multipleCategory": true,
-      "multipleCategories": ["Smartphones","Laptops","Tablets","Desktop Computers","Monitors","Computer Components","Networking Devices","Smart Home Devices","Audio & Video Equipment", "Wearable Technology","Camera & Photography","Video Games & Consoles","Drones","Office Electronics","Security & Surveillance","Car Electronics"
+      "multipleCategories": [
+        "Smartphones",
+        "Laptops",
+        "Tablets",
+        "Desktop Computers",
+        "Monitors",
+        "Computer Components",
+        "Networking Devices",
+        "Smart Home Devices",
+        "Audio & Video Equipment",
+        "Wearable Technology",
+        "Camera & Photography",
+        "Video Games & Consoles",
+        "Drones",
+        "Office Electronics",
+        "Security & Surveillance",
+        "Car Electronics"
       ]
     },
     {
@@ -315,7 +386,7 @@
       "linkTwitter": "https://twitter.com/",
       "linkInstagram": "https://instagram.com/",
       "linkLinkedin": "https://linkedin.com/",
-      "photo": "./src/assets/personal/image46.svg" 
+      "photo": "./src/assets/personal/image46.svg"
     },
     {
       "name": "Emma Watson",
@@ -323,7 +394,7 @@
       "linkTwitter": "https://twitter.com/",
       "linkInstagram": "https://instagram.com/",
       "linkLinkedin": "https://linkedin.com/",
-      "photo": "./src/assets/personal/image51.svg" 
+      "photo": "./src/assets/personal/image51.svg"
     },
     {
       "name": "Will Smith",
@@ -331,7 +402,7 @@
       "linkTwitter": "https://twitter.com/",
       "linkInstagram": "https://instagram.com/",
       "linkLinkedin": "https://linkedin.com/",
-      "photo": "./src/assets/personal/image47.svg" 
+      "photo": "./src/assets/personal/image47.svg"
     },
     {
       "name": "Andrew Houston",
@@ -339,7 +410,7 @@
       "linkTwitter": "https://twitter.com/",
       "linkInstagram": "https://instagram.com/",
       "linkLinkedin": "https://linkedin.com/",
-      "photo": "./src/assets/personal/image46.svg" 
+      "photo": "./src/assets/personal/image46.svg"
     }
   ],
   "featured": [
@@ -378,47 +449,47 @@
   "browsecategory": [
     {
       "categoryName": "Phones",
-      "categoryBootstrapName" : "Phone",
+      "categoryBootstrapName": "Phone",
       "linkTo": "phones"
     },
     {
       "categoryName": "Computers",
-      "categoryBootstrapName" : "Laptop",
+      "categoryBootstrapName": "Laptop",
       "linkTo": "computers"
     },
     {
       "categoryName": "Smartwatch",
-      "categoryBootstrapName" : "Smartwatch",
+      "categoryBootstrapName": "Smartwatch",
       "linkTo": "smartwatch"
     },
     {
       "categoryName": "Camera",
-      "categoryBootstrapName" : "Camera",
+      "categoryBootstrapName": "Camera",
       "linkTo": "camera"
     },
     {
       "categoryName": "Headphones",
-      "categoryBootstrapName" : "Headphones",
+      "categoryBootstrapName": "Headphones",
       "linkTo": "headphones"
     },
     {
       "categoryName": "Gaming",
-      "categoryBootstrapName" : "Controller",
+      "categoryBootstrapName": "Controller",
       "linkTo": "gaming"
     },
     {
       "categoryName": "Mouse",
-      "categoryBootstrapName" : "Mouse",
+      "categoryBootstrapName": "Mouse",
       "linkTo": "mouse"
     },
     {
       "categoryName": "TV",
-      "categoryBootstrapName" : "TV",
+      "categoryBootstrapName": "TV",
       "linkTo": "tv"
     },
     {
       "categoryName": "Webcam",
-      "categoryBootstrapName" : "Webcam",
+      "categoryBootstrapName": "Webcam",
       "linkTo": "webcam"
     }
   ],
@@ -453,26 +524,78 @@
       "isLoggedIn": true
     }
   ],
-  "slides" : [
+  "slides": [
     {
-      "image" : "https://mobirise.com/extensions/commercem4/assets/images/1.jpg",
+      "image": "https://mobirise.com/extensions/commercem4/assets/images/1.jpg",
       "textURL": "/apple-shop"
     },
     {
-      "image" : "https://plus.unsplash.com/premium_photo-1661546049594-a743a5a1f0b7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://plus.unsplash.com/premium_photo-1661546049594-a743a5a1f0b7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "textURL": "/unkownaddress"
     },
     {
-      "image" : "https://images.unsplash.com/photo-1671492247768-74f54774dbb2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://images.unsplash.com/photo-1671492247768-74f54774dbb2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "textURL": "/oils"
     },
     {
-      "image" : "https://images.unsplash.com/photo-1569961384048-0001b31bb6f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://images.unsplash.com/photo-1569961384048-0001b31bb6f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "textURL": "/waters"
     },
     {
       "image": "https://images.unsplash.com/photo-1495753379358-73c76ccd644b?q=80&w=2139&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "textURL": "/unkownaddress"
+    }
+  ],
+  "completedOrders": [
+    {
+      "id": "083a",
+      "firstname": "refi",
+      "company": "",
+      "street": "elizade",
+      "apartament": "",
+      "town": "refi",
+      "phone": "refi",
+      "email": "refi@gmail.com",
+      "orderNumber": "9054752878677080",
+      "cartitems": [
+        {
+          "id": 8,
+          "name": "S-Series Comfort Chair",
+          "image": "./src/assets/products/comfort-chair.svg",
+          "category": "homelifestyle",
+          "price": 400,
+          "bestselling": false,
+          "flashsale": true,
+          "discount": true,
+          "discountedPrice": 300,
+          "discountRateDisplay": true,
+          "discountRate": 25,
+          "starCount": 3,
+          "isNew": false,
+          "feedbackCount": 1024,
+          "subtotal": 0,
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "name": "ASUS FHD Gaming Laptop",
+          "image": "./src/assets/products/gaminglaptop.svg",
+          "category": "electronics",
+          "price": 700,
+          "bestselling": false,
+          "flashsale": false,
+          "discount": false,
+          "discountedPrice": 0,
+          "discountRateDisplay": true,
+          "discountRate": 35,
+          "starCount": 5,
+          "isNew": false,
+          "feedbackCount": 325,
+          "subtotal": 0,
+          "quantity": 1
+        }
+      ],
+      "status": "Order Confirmed"
     }
   ]
 }

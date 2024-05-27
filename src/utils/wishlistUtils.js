@@ -35,12 +35,12 @@ export const getWishlist = () => {
   export const addToCard = (product) => {
     const carditems = getCardItems();
     carditems.push(product);
-    saveWishlist(carditems);
+    saveCardItems(carditems);
   };
   
   export const removeFromCard = (productId) => {
-    const carditems = getWishlist();
+    const carditems = getCardItems();
     const updatedCardItems = carditems.filter((product) => product.id !== productId);
-    saveWishlist(updatedCardItems);
+    saveCardItems(updatedCardItems);
   };
   

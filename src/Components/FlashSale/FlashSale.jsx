@@ -148,7 +148,7 @@ function FlashSale() {
                     <div className="flashsale__bottom">
                         <div className="flashsale__products">
                             <Slider ref={sliderRef} {...settings}>
-                                {products.map((product, index) => {
+                                {randomProducts.map((product, index) => {
                                     const isInWishlist = wishlist.some(item => item.id === product.id);
                                     return (
                                         <div className="flashsale__box" key={index}>

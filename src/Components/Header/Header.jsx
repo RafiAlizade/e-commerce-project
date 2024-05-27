@@ -12,7 +12,7 @@ import {
   BoxArrowLeft,
 } from "react-bootstrap-icons";
 import { useState, useEffect } from "react";
-import { getWishlist } from './../../utils/wishlistUtils';
+import { getWishlist , getCardItems } from './../../utils/wishlistUtils';
 import axios from "axios";
 
 function Header() {
@@ -20,6 +20,7 @@ function Header() {
   const [account, setAccount] = useState([]);
   const [statusAccount, setStatusAccount] = useState(true);
   const [wishlistTable, setWishlistTable] = useState([]);
+  const [cardTable, setCardTable] = useState([]);
 
   const changeStatusAccount = () => {
     const menuContainer = document.querySelector(".header__account_menu");
@@ -53,12 +54,22 @@ function Header() {
     };
 
     updateWishlist();
+    const intervalWishlist = setInterval(updateWishlist, 100);
 
-    const intervalId = setInterval(updateWishlist, 100);
+    return () => clearInterval(intervalWishlist);
+}, []);
 
-    return () => clearInterval(intervalId);
+useEffect(() => {
+    const updateCardList = () => {
+      setCardTable(getCardItems());
+    };
 
-  }, []);
+    updateCardList();
+
+    const intervalCardList = setInterval(updateCardList, 100);
+
+    return () => clearInterval(intervalCardList);
+}, []);
 
 
   return (
@@ -128,6 +139,9 @@ function Header() {
                 <button className="header__cart_btn">
                   <Link to="/cart">
                     <Cart />
+                    <span className={cardTable.length > 0 ? 'count__cart' : '' }>
+                      {cardTable.length > 0 ? cardTable.length : ''}
+                    </span>
                   </Link>
                 </button>
 
