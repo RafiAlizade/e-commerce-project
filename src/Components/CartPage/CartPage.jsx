@@ -48,6 +48,7 @@ function CartPage() {
     setCartItems(refreshedItems);
   };
 
+
   return (
     <div className="app__cart">
       <div className="container">

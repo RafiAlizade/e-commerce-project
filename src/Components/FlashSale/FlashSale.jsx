@@ -7,7 +7,7 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { addToWishlist, removeFromWishlist, getWishlist } from './../../utils/wishlistUtils';
+import { addToWishlist, removeFromWishlist, getWishlist, getCardItems, addToCard , removeFromCard  } from './../../utils/wishlistUtils';
 
 const CountdownRenderer = ({ days, hours, minutes, seconds }) => {
     return (
@@ -40,6 +40,7 @@ function FlashSale() {
     const [products, setProducts] = useState([]);
     const [randomProducts, setRandomProducts] = useState([]);
     const [wishlist, setWishlist] = useState([]);
+    const [cart, setCart] = useState([]);
 
     const sliderRef = useRef(null);
 
@@ -52,18 +53,33 @@ function FlashSale() {
         getFlashProduct();
     }, []);
 
-    const handleAddToWishlist = (product) => {
+    const handleAddToWishlist = (e, product) => {
+        e.stopPropagation();
         const wishlist = getWishlist();
-        const isProductInWishlist = wishlist.some(item => item.id === product.id);
-
+        const isProductInWishlist = wishlist.some((item) => item.id === product.id);
+    
         if (isProductInWishlist) {
-            removeFromWishlist(product.id);
-            setWishlist(wishlist.filter(item => item.id !== product.id));
+          removeFromWishlist(product.id);
+          setWishlist(wishlist.filter((item) => item.id !== product.id));
         } else {
-            addToWishlist(product);
-            setWishlist([...wishlist, product]);
+          addToWishlist(product);
+          setWishlist([...wishlist, product]);
         }
-    };
+      };
+    
+      const handleAddToCard = (e, product) => {
+        e.stopPropagation();
+        const carditems = getCardItems();
+        const isProductInCard = carditems.some((item) => item.id === product.id);
+    
+        if (isProductInCard) {
+          removeFromCard(product.id);
+          setCart(carditems.filter((item) => item.id !== product.id));
+        } else {
+          addToCard(product);
+          setCart([...cart, product]);
+        }
+      };
 
     useEffect(() => {
         if (products.length > 0) {
@@ -75,6 +91,7 @@ function FlashSale() {
 
     useEffect(() => {
         setWishlist(getWishlist());
+        setCart(getCardItems());
     }, [products]);
 
     const nextSlide = () => {
@@ -84,6 +101,14 @@ function FlashSale() {
     const prevSlide = () => {
         sliderRef.current.slickPrev();
     };
+
+    const isInCartlist = (product) => {
+        return cart.some(item => item.id === product.id);
+      };
+      
+      const isInWishlist = (product) => {
+        return wishlist.some(item => item.id === product.id);
+      };
 
     const settings = {
         dots: false,
@@ -149,14 +174,13 @@ function FlashSale() {
                         <div className="flashsale__products">
                             <Slider ref={sliderRef} {...settings}>
                                 {randomProducts.map((product, index) => {
-                                    const isInWishlist = wishlist.some(item => item.id === product.id);
                                     return (
                                         <div className="flashsale__box" key={index}>
                                             <div className="flashsale__discountprice">
                                                 -{product.discountRate}%
                                             </div>
                                             <div className="flashsale__buttons_abs">
-                                                <button className="flashsale__wishlist_btn" style={{ backgroundColor: isInWishlist ? 'rgb(219, 68, 68)' : 'rgb(255, 255, 255)', color: isInWishlist ? '#fff' : '#000' , transition: 'ease-in-out .2s'  }} onClick={() => handleAddToWishlist(product)}>
+                                                <button className="flashsale__wishlist_btn" style={{ backgroundColor: isInWishlist(product) ? 'rgb(219, 68, 68)' : 'rgb(255, 255, 255)', color: isInWishlist(product) ? '#fff' : '#000' , transition: 'ease-in-out .2s'  }} onClick={(e) => handleAddToWishlist(e, product)}>
                                                     <Heart />
                                                 </button>
                                                 <button className="flashsale__show_btn">
@@ -165,7 +189,7 @@ function FlashSale() {
                                             </div>
                                             <div className="product__image">
                                                 <img src={product.image} alt={product.name} />
-                                                <button className="flashsale__addcard">Add To Cart</button>
+                                                <button className="flashsale__addcard"  onClick={(e) => handleAddToCard(e, product)}> {isInCartlist(product) ? 'Remove from Card' : 'Add to Card'}</button>
                                             </div>
                                             <div className="product__description">
                                                 <h5 className="product__name">{product.name}</h5>

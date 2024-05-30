@@ -28,37 +28,44 @@ function WishPage() {
     }, [products])
 
 
-    const handleAddToWishlist = (product) => {
+    const handleAddToWishlist = (e, product) => {
+        e.stopPropagation();
         const wishlist = getWishlist();
-        const isProductInWishlist = wishlist.some(item => item.id === product.id);
-
+        const isProductInWishlist = wishlist.some((item) => item.id === product.id);
+    
         if (isProductInWishlist) {
-            removeFromWishlist(product.id);
-            setWishlist(wishlist.filter(item => item.id !== product.id));
+          removeFromWishlist(product.id);
+          setWishlist(wishlist.filter((item) => item.id !== product.id));
         } else {
-            addToWishlist(product);
-            setWishlist([...wishlist, product]);
+          addToWishlist(product);
+          setWishlist([...wishlist, product]);
         }
-    };
-
-    const handleAddToCard = (product) => {
+      };
+    
+      const handleAddToCard = (e, product) => {
+        e.stopPropagation();
         const carditems = getCardItems();
-        const isProductInCard = carditems.some(item => item.id === product.id);
-
+        const isProductInCard = carditems.some((item) => item.id === product.id);
+    
         if (isProductInCard) {
-            removeFromCard(product.id);
-            setCard(carditems.filter(item => item.id !== product.id));
+          removeFromCard(product.id);
+          setCard(carditems.filter((item) => item.id !== product.id));
         } else {
-            addToCard(product);
-            setCard([...card, product]);
+          addToCard(product);
+          setCard([...card, product]);
         }
-    };
+      };
 
     const wishlistCount = getWishlist();
 
     useEffect(() => {
         setWishlist(getWishlist());
+        setCard(getCardItems());
     }, [products]);
+
+    const isInCartlist = (product) => {
+        return card.some(item => item.id === product.id);
+      };
   return (
     <div className="app__wishlist">
         <div className="container">
@@ -78,7 +85,7 @@ function WishPage() {
                             {wishlist.map((wishs, index) => (
                                 <div className="wishlist__box" key={index}>
                                 <div className="wishlist__buttons_abs">
-                                    <button className="wishlist__remove_btn" onClick={() => handleAddToWishlist(wishs)}>
+                                    <button className="wishlist__remove_btn" onClick={(e) => handleAddToWishlist(e, wishs)}>
                                         <Trash />
                                     </button>
                                 </div>
@@ -122,7 +129,7 @@ function WishPage() {
                                 </div>
                                 <div className="product__image">
                                     <img src={products.image} />
-                                    <button className="wishlist__addcard" onClick={() => handleAddToCard(products)}>Add To Card</button>
+                                    <button className="wishlist__addcard" onClick={(e) => handleAddToCard(e, products)}>{isInCartlist(products) ? 'Remove from Card' : 'Add to Card'}</button>
                                 </div>
                                 <div className="product__description">
                                     <h5 className="product__name">{products.name}</h5>

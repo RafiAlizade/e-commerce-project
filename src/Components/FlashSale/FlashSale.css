@@ -198,6 +198,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .product__description {
@@ -336,4 +337,12 @@ cursor: pointer;
     display: none;
   }
 
-  
+  .slick-slide img {
+    object-fit: contain;
+    width: 55%;
+  }
+
+  .product__image img {
+    object-fit: contain;
+    width: 55%;
+  }

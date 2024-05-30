@@ -1,12 +1,16 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "The North Coat",
       "image": "./src/assets/products/the-north-coat.svg",
+      "description": "Discover the perfect blend of style, comfort, and durability with The North Coat. This premium outerwear piece is designed for adventurers and urban explorers alike, offering unmatched protection against the elements without compromising on fashion. Crafted from high-quality, weather-resistant materials, The North Coat features a sleek, modern design that pairs effortlessly with any outfit.",
       "category": "mensfashion",
+      "multipleColors": false,
+      "colors:": [],
       "price": 360,
       "bestselling": true,
+      "sizes": ["XS", "S", "M", "L"],
       "discount": true,
       "flashsale": false,
       "discountedPrice": 260,
@@ -14,15 +18,19 @@
       "discountRate": 28,
       "starCount": 5,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 65,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Gucci Duffle Bag",
       "image": "./src/assets/products/gucci-duffle-bag.svg",
+      "description": "Elevate your travel style with the luxurious Gucci Duffle Bag, a perfect fusion of elegance and practicality. This exquisite bag is meticulously crafted from premium materials, embodying the timeless sophistication and iconic design",
       "category": "womansfashion",
+      "multipleColors": false,
+      "colors:": [],
       "price": 1160,
       "bestselling": true,
       "flashsale": false,
@@ -32,15 +40,19 @@
       "discountRate": 17,
       "starCount": 4,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 54,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "RGB Liquid CPU Cooler",
       "image": "./src/assets/products/liquid-cpu-cooler.svg",
+      "description": "Enhance your PC's performance and aesthetics with the RGB Liquid CPU Cooler. This high-performance cooler is designed to keep your CPU running at optimal temperatures while adding a vibrant, customizable light show to your setup.",
       "category": "electronics",
+      "multipleColors": false,
+      "colors:": [],
       "price": 170,
       "bestselling": true,
       "flashsale": false,
@@ -50,15 +62,19 @@
       "discountRate": 29,
       "starCount": 4,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 42,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Small Bookshelf",
       "image": "./src/assets/products/bookshelfunsplash1.svg",
+      "description": "Maximize your space with this stylish and functional Small Bookshelf. Perfect for compact living areas, this versatile piece offers ample storage while seamlessly blending into any room decor.",
       "category": "homelifestyle",
+      "multipleColors": false,
+      "colors:": [],
       "price": 360,
       "bestselling": true,
       "flashsale": true,
@@ -68,15 +84,19 @@
       "discountRate": 0,
       "starCount": 5,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 537,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "HAVIT HV-G92 Gamepad",
       "image": "./src/assets/products/g92-2-500x500 1.svg",
+      "description": "Experience superior control and comfort with the HAVIT HV-G92 Gamepad. Designed for gamers, this gamepad offers an ergonomic grip and responsive buttons, ensuring precision in every move. Its dual vibration feedback provides an immersive gaming experience, while the customizable buttons cater to your unique gaming style. Compatible with a wide range of devices, including PCs and gaming consoles, the HV-G92 is your perfect companion for intense gaming sessions. Enjoy seamless connectivity and enhance your gameplay with this reliable and stylish gamepad.",
       "category": "electronics",
+      "multipleColors": false,
+      "colors:": [],
       "price": 160,
       "bestselling": true,
       "flashsale": true,
@@ -86,15 +106,19 @@
       "discountRate": 25,
       "starCount": 5,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 88,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "AK-900 Wired Keyboard",
       "image": "./src/assets/products/ak-900-01-500x500%201.svg",
+      "description": "Upgrade your typing experience with the AK-900 Wired Keyboard, a perfect blend of functionality and durability. This sleek, full-sized keyboard is designed for both professional and personal use, offering a comfortable and efficient typing experience.",
       "category": "electronics",
+      "multipleColors": false,
+      "colors:": [],
       "price": 70,
       "bestselling": true,
       "flashsale": true,
@@ -104,15 +128,19 @@
       "discountRate": 43,
       "starCount": 4,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 75,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "IPS LCD Gaming Monitor",
       "image": "./src/assets/products/g27cq4-500x500%201.svg",
+      "description": "Immerse yourself in the world of gaming with the IPS LCD Gaming Monitor. Designed for serious gamers, this monitor offers stunning visuals and smooth performance, enhancing every gaming experience.",
       "category": "electronics",
+      "multipleColors": false,
+      "colors:": [],
       "price": 400,
       "bestselling": true,
       "flashsale": true,
@@ -122,15 +150,19 @@
       "discountRate": 8,
       "starCount": 5,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 214,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "S-Series Comfort Chair",
       "image": "./src/assets/products/comfort-chair.svg",
+      "description": "Experience unparalleled comfort and support with the S-Series Comfort Chair. Designed with your well-being in mind, this ergonomic chair is perfect for both home and office settings, offering a blend of style, functionality, and superior comfort.",
       "category": "homelifestyle",
+      "multipleColors": false,
+      "colors:": [],
       "price": 400,
       "bestselling": false,
       "flashsale": true,
@@ -140,15 +172,19 @@
       "discountRate": 25,
       "starCount": 3,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 1024,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Breed Dry Dog Food",
       "image": "./src/assets/products/dogfood.svg",
+      "description": "Give your dog the nutrition they deserve with Breed Dry Dog Food, formulated to meet the specific dietary needs of different breeds. This premium dog food ensures your furry friend receives balanced, high-quality ingredients for a healthy and active life.",
       "category": "homelifestyle",
+      "multipleColors": false,
+      "colors:": [],
       "price": 100,
       "bestselling": false,
       "flashsale": false,
@@ -158,15 +194,19 @@
       "discountRate": 35,
       "starCount": 3,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 35,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "CANON EOS DSLR Camera",
       "image": "./src/assets/products/camera.svg",
+      "description": "Capture the world in stunning detail with the CANON EOS DSLR Camera. Designed for photographers of all levels, this versatile camera offers exceptional image quality, advanced features, and user-friendly operation.",
       "category": "electronics",
+      "multipleColors": false,
+      "colors:": [],
       "price": 360,
       "bestselling": false,
       "flashsale": false,
@@ -176,15 +216,19 @@
       "discountRate": 35,
       "starCount": 4,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 95,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "ASUS FHD Gaming Laptop",
       "image": "./src/assets/products/gaminglaptop.svg",
+      "description": "Unleash your gaming potential with the ASUS FHD Gaming Laptop, designed to deliver exceptional performance and immersive visuals. Whether you're a casual gamer or a competitive enthusiast, this powerful laptop is built to handle the most demanding games and applications with ease.",
       "category": "electronics",
+      "multipleColors": false,
+      "colors:": [],
       "price": 700,
       "bestselling": false,
       "flashsale": false,
@@ -194,15 +238,19 @@
       "discountRate": 35,
       "starCount": 5,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 325,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 12,
-      "name": "Curology Product Set ",
+      "id": "12",
+      "name": "Curology Product Set",
       "image": "./src/assets/products/curologyproduct.svg",
+      "description": "Transform your skincare routine with the Curology Product Set, a personalized skincare regimen designed to address your unique skin concerns. Crafted by dermatology experts, this set provides a comprehensive approach to achieving clear, healthy skin.",
       "category": "medicine",
+      "multipleColors": false,
+      "colors:": [],
       "price": 500,
       "bestselling": false,
       "flashsale": false,
@@ -212,15 +260,28 @@
       "discountRate": 35,
       "starCount": 4,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 145,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Kids Electric Car",
       "image": "./src/assets/products/kidselectriccars.svg",
+      "description": "Let your child experience the thrill of driving with the Kids Electric Car, a safe and fun ride-on vehicle designed to provide endless entertainment. Perfect for young adventurers, this electric car combines realistic features with easy-to-use controls, ensuring a delightful and secure driving experience.",
       "category": "electronics",
+      "multipleColors": true,
+      "colors": [
+        {
+          "name": "red",
+          "coloredImage": "./src/assets/products/kidselectriccars.svg"
+        },
+        {
+          "name": "green",
+          "coloredImage": "./src/assets/products/kidselectriccars-green.jpg"
+        }
+      ],
       "price": 960,
       "bestselling": false,
       "flashsale": false,
@@ -230,15 +291,28 @@
       "discountRate": 35,
       "starCount": 5,
       "isNew": true,
+      "inStock": true,
       "feedbackCount": 65,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Jr. Zoom Soccer Cleats",
       "image": "./src/assets/products/copesense.svg",
+      "description": "Elevate your young athlete's game with the Jr. Zoom Soccer Cleats, designed for speed, agility, and comfort on the field. These high-performance cleats are crafted to help junior players excel, providing superior traction and support for every move.",
       "category": "mensfashion",
+      "multipleColors": true,
+      "colors": [
+        {
+          "name": "yellow",
+          "coloredImage": "./src/assets/products/copesense.svg"
+        },
+        {
+          "name": "red",
+          "coloredImage": "./src/assets/products/copesense-red.jpg"
+        }
+      ],
       "price": 70,
       "bestselling": false,
       "flashsale": false,
@@ -248,14 +322,18 @@
       "discountRate": 35,
       "starCount": 5,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 35,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "GP11 Shooter USB Gamepad",
       "image": "./src/assets/products/gp11gamepad.svg",
+      "description": "",
+      "multipleColors": false,
+      "colors:": [],
       "category": "electronics",
       "price": 200,
       "bestselling": false,
@@ -266,17 +344,22 @@
       "discountRate": 35,
       "starCount": 4,
       "isNew": true,
+      "inStock": true,
       "feedbackCount": 55,
       "subtotal": 0,
       "quantity": 1
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Quilted Satin Jacket",
       "image": "./src/assets/products/satinjacket.svg",
+      "description": "Add a touch of elegance and warmth to your wardrobe with the Quilted Satin Jacket. This luxurious jacket combines sophisticated style with practical comfort, making it a versatile addition to any outfit.",
+      "multipleColors": false,
+      "colors:": [],
       "category": "mensfashion",
       "price": 220,
       "bestselling": false,
+      "sizes": ["XS", "S", "M", "L"],
       "flashsale": false,
       "discount": false,
       "discountedPrice": 0,
@@ -284,7 +367,31 @@
       "discountRate": 35,
       "starCount": 4,
       "isNew": false,
+      "inStock": true,
       "feedbackCount": 55,
+      "subtotal": 0,
+      "quantity": 1
+    },
+    {
+      "id": "17",
+      "name": "PlayStation Dualsense Wireless Controller",
+      "image": "./src/assets/products/ps5controller.svg",
+      "description": "PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+      "multipleColors": false,
+      "colors:": [],
+      "category": "electronics",
+      "price": 192,
+      "bestselling": true,
+      "sizes": [],
+      "flashsale": false,
+      "discount": false,
+      "discountedPrice": 0,
+      "discountRateDisplay": false,
+      "discountRate": 0,
+      "starCount": 4,
+      "isNew": false,
+      "inStock": true,
+      "feedbackCount": 150,
       "subtotal": 0,
       "quantity": 1
     }
@@ -306,7 +413,8 @@
         "Shoes",
         "Bags",
         "Jewelry"
-      ]
+      ],
+      "id": "c8d0"
     },
     {
       "name": "Men's fashion",
@@ -323,7 +431,8 @@
         "Shoes",
         "Bags",
         "Jewelry"
-      ]
+      ],
+      "id": "383e"
     },
     {
       "name": "Electronics",
@@ -346,37 +455,44 @@
         "Office Electronics",
         "Security & Surveillance",
         "Car Electronics"
-      ]
+      ],
+      "id": "6fba"
     },
     {
       "name": "Home & Lifestyle",
       "subname": "homelifestyle",
-      "multipleCategory": false
+      "multipleCategory": false,
+      "id": "566a"
     },
     {
       "name": "Medicine",
       "subname": "medicine",
-      "multipleCategory": false
+      "multipleCategory": false,
+      "id": "7ae6"
     },
     {
       "name": "Sports & Outdoor",
       "subname": "sportsoutdoor",
-      "multipleCategory": false
+      "multipleCategory": false,
+      "id": "b462"
     },
     {
       "name": "Baby's & Toys",
       "subname": "babystoys",
-      "multipleCategory": false
+      "multipleCategory": false,
+      "id": "4dbf"
     },
     {
       "name": "Groceries & Pets",
       "subname": "groceriespets",
-      "multipleCategory": false
+      "multipleCategory": false,
+      "id": "9c8c"
     },
     {
       "name": "Health & Beauty",
       "subname": "healthbeauty",
-      "multipleCategory": false
+      "multipleCategory": false,
+      "id": "6d45"
     }
   ],
   "personals": [
@@ -386,7 +502,8 @@
       "linkTwitter": "https://twitter.com/",
       "linkInstagram": "https://instagram.com/",
       "linkLinkedin": "https://linkedin.com/",
-      "photo": "./src/assets/personal/image46.svg"
+      "photo": "./src/assets/personal/image46.svg",
+      "id": "c2bb"
     },
     {
       "name": "Emma Watson",
@@ -394,7 +511,8 @@
       "linkTwitter": "https://twitter.com/",
       "linkInstagram": "https://instagram.com/",
       "linkLinkedin": "https://linkedin.com/",
-      "photo": "./src/assets/personal/image51.svg"
+      "photo": "./src/assets/personal/image51.svg",
+      "id": "4c89"
     },
     {
       "name": "Will Smith",
@@ -402,7 +520,8 @@
       "linkTwitter": "https://twitter.com/",
       "linkInstagram": "https://instagram.com/",
       "linkLinkedin": "https://linkedin.com/",
-      "photo": "./src/assets/personal/image47.svg"
+      "photo": "./src/assets/personal/image47.svg",
+      "id": "32f9"
     },
     {
       "name": "Andrew Houston",
@@ -410,7 +529,8 @@
       "linkTwitter": "https://twitter.com/",
       "linkInstagram": "https://instagram.com/",
       "linkLinkedin": "https://linkedin.com/",
-      "photo": "./src/assets/personal/image46.svg"
+      "photo": "./src/assets/personal/image46.svg",
+      "id": "f4f9"
     }
   ],
   "featured": [
@@ -418,101 +538,119 @@
       "name": "PlayStation 5",
       "description": "Black and White version of the PS5 coming out on sale.",
       "adImage": "./src/assets/featured/Frame704.svg",
-      "linkTo": "./link"
+      "linkTo": "./link",
+      "id": "ccc0"
     },
     {
       "name": "Women’s Collections",
       "description": "Featured woman collections that give you another vibe.",
       "adImage": "./src/assets/featured/Frame7056.svg",
-      "linkTo": "./link"
+      "linkTo": "./link",
+      "id": "99c4"
     },
     {
       "name": "Speakers",
       "description": "Amazon wireless speakers",
       "adImage": "./src/assets/featured/Frame707.svg",
-      "linkTo": "./link"
+      "linkTo": "./link",
+      "id": "a2d6"
     },
     {
       "name": "Perfume",
       "description": "GUCCI INTENSE OUD EDP",
       "adImage": "./src/assets/featured/Frame706.svg",
-      "linkTo": "./link"
+      "linkTo": "./link",
+      "id": "830c"
     }
   ],
   "advertising": [
     {
       "adTitle": "Enhance Your Music Experience",
       "adLink": "/unkown",
-      "adImage": "./src/assets/products/adimage1.svg"
+      "adImage": "./src/assets/products/adimage1.svg",
+      "id": "9f07"
     }
   ],
   "browsecategory": [
     {
       "categoryName": "Phones",
       "categoryBootstrapName": "Phone",
-      "linkTo": "phones"
+      "linkTo": "phones",
+      "id": "782b"
     },
     {
       "categoryName": "Computers",
       "categoryBootstrapName": "Laptop",
-      "linkTo": "computers"
+      "linkTo": "computers",
+      "id": "d390"
     },
     {
       "categoryName": "Smartwatch",
       "categoryBootstrapName": "Smartwatch",
-      "linkTo": "smartwatch"
+      "linkTo": "smartwatch",
+      "id": "ce6a"
     },
     {
       "categoryName": "Camera",
       "categoryBootstrapName": "Camera",
-      "linkTo": "camera"
+      "linkTo": "camera",
+      "id": "45a0"
     },
     {
       "categoryName": "Headphones",
       "categoryBootstrapName": "Headphones",
-      "linkTo": "headphones"
+      "linkTo": "headphones",
+      "id": "aeb4"
     },
     {
       "categoryName": "Gaming",
       "categoryBootstrapName": "Controller",
-      "linkTo": "gaming"
+      "linkTo": "gaming",
+      "id": "9f47"
     },
     {
       "categoryName": "Mouse",
       "categoryBootstrapName": "Mouse",
-      "linkTo": "mouse"
+      "linkTo": "mouse",
+      "id": "6133"
     },
     {
       "categoryName": "TV",
       "categoryBootstrapName": "TV",
-      "linkTo": "tv"
+      "linkTo": "tv",
+      "id": "0e21"
     },
     {
       "categoryName": "Webcam",
       "categoryBootstrapName": "Webcam",
-      "linkTo": "webcam"
+      "linkTo": "webcam",
+      "id": "b568"
     }
   ],
   "navlinks": [
     {
       "name": "Home",
       "url": "/",
-      "active": true
+      "active": true,
+      "id": "083b"
     },
     {
       "name": "Contact",
       "url": "/contact",
-      "active": true
+      "active": true,
+      "id": "546c"
     },
     {
       "name": "About",
       "url": "/about",
-      "active": true
+      "active": true,
+      "id": "a422"
     },
     {
       "name": "Sign up",
       "url": "/signup",
-      "active": true
+      "active": true,
+      "id": "2444"
     }
   ],
   "accounts": [
@@ -521,29 +659,35 @@
       "lastName": "Azizov",
       "email": "yasharrr@gmail.com",
       "address": "Kingston, 5236, United State",
-      "isLoggedIn": true
+      "isLoggedIn": true,
+      "id": "ebdd"
     }
   ],
   "slides": [
     {
       "image": "https://mobirise.com/extensions/commercem4/assets/images/1.jpg",
-      "textURL": "/apple-shop"
+      "textURL": "/apple-shop",
+      "id": "e33c"
     },
     {
       "image": "https://plus.unsplash.com/premium_photo-1661546049594-a743a5a1f0b7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "textURL": "/unkownaddress"
+      "textURL": "/unkownaddress",
+      "id": "9b31"
     },
     {
       "image": "https://images.unsplash.com/photo-1671492247768-74f54774dbb2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "textURL": "/oils"
+      "textURL": "/oils",
+      "id": "cc65"
     },
     {
       "image": "https://images.unsplash.com/photo-1569961384048-0001b31bb6f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "textURL": "/waters"
+      "textURL": "/waters",
+      "id": "4b19"
     },
     {
       "image": "https://images.unsplash.com/photo-1495753379358-73c76ccd644b?q=80&w=2139&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "textURL": "/unkownaddress"
+      "textURL": "/unkownaddress",
+      "id": "ec50"
     }
   ],
   "completedOrders": [
@@ -591,6 +735,152 @@
           "starCount": 5,
           "isNew": false,
           "feedbackCount": 325,
+          "subtotal": 0,
+          "quantity": 1
+        }
+      ],
+      "status": "Order Confirmed"
+    },
+    {
+      "id": "4b10",
+      "firstname": "refi",
+      "company": "",
+      "street": "elizade",
+      "apartament": "",
+      "town": "refie",
+      "phone": "refi",
+      "email": "refi@gmail.com",
+      "orderNumber": "8621259531730631",
+      "cartitems": [
+        {
+          "id": "13",
+          "name": "Kids Electric Car",
+          "image": "./src/assets/products/kidselectriccars.svg",
+          "category": "electronics",
+          "price": 960,
+          "bestselling": false,
+          "flashsale": false,
+          "discount": false,
+          "discountedPrice": 0,
+          "discountRateDisplay": true,
+          "discountRate": 35,
+          "starCount": 5,
+          "isNew": true,
+          "feedbackCount": 65,
+          "subtotal": 0,
+          "quantity": 1
+        }
+      ],
+      "status": "Order Confirmed"
+    },
+    {
+      "id": "f440",
+      "firstname": "refi",
+      "company": "",
+      "street": "elizade",
+      "apartament": "",
+      "town": "refi",
+      "phone": "refi",
+      "email": "refi@gmail.com",
+      "orderNumber": "2961770149065118",
+      "cartitems": [
+        {
+          "id": "12",
+          "name": "Curology Product Set ",
+          "image": "./src/assets/products/curologyproduct.svg",
+          "category": "medicine",
+          "price": 500,
+          "bestselling": false,
+          "flashsale": false,
+          "discount": false,
+          "discountedPrice": 0,
+          "discountRateDisplay": true,
+          "discountRate": 35,
+          "starCount": 4,
+          "isNew": false,
+          "feedbackCount": 145,
+          "subtotal": 0,
+          "quantity": 1
+        },
+        {
+          "id": "15",
+          "name": "GP11 Shooter USB Gamepad",
+          "image": "./src/assets/products/gp11gamepad.svg",
+          "category": "electronics",
+          "price": 200,
+          "bestselling": false,
+          "flashsale": false,
+          "discount": false,
+          "discountedPrice": 0,
+          "discountRateDisplay": true,
+          "discountRate": 35,
+          "starCount": 4,
+          "isNew": true,
+          "feedbackCount": 55,
+          "subtotal": 0,
+          "quantity": 1
+        }
+      ],
+      "status": "Order Confirmed"
+    },
+    {
+      "id": "afb4",
+      "firstname": "refi",
+      "company": "",
+      "street": "elizade",
+      "apartament": "",
+      "town": "refi",
+      "phone": "refi",
+      "email": "refi@gmail.com",
+      "orderNumber": "5202281865561260",
+      "cartitems": [
+        {
+          "id": "16",
+          "name": "Quilted Satin Jacket",
+          "image": "./src/assets/products/satinjacket.svg",
+          "category": "mensfashion",
+          "price": 220,
+          "bestselling": false,
+          "flashsale": false,
+          "discount": false,
+          "discountedPrice": 0,
+          "discountRateDisplay": true,
+          "discountRate": 35,
+          "starCount": 4,
+          "isNew": false,
+          "feedbackCount": 55,
+          "subtotal": 0,
+          "quantity": 1
+        }
+      ],
+      "status": "Order Confirmed"
+    },
+    {
+      "id": "d8f3",
+      "firstname": "alimdare",
+      "company": "",
+      "street": "oglan",
+      "apartament": "oglan",
+      "town": "oglan",
+      "phone": "oglan",
+      "email": "refi@gmail.com",
+      "orderNumber": "9736757911804578",
+      "cartitems": [
+        {
+          "id": "10",
+          "name": "CANON EOS DSLR Camera",
+          "image": "./src/assets/products/camera.svg",
+          "category": "electronics",
+          "price": 360,
+          "bestselling": false,
+          "flashsale": false,
+          "discount": false,
+          "discountedPrice": 0,
+          "discountRateDisplay": true,
+          "discountRate": 35,
+          "starCount": 4,
+          "isNew": false,
+          "feedbackCount": 95,
           "subtotal": 0,
           "quantity": 1
         }

@@ -50,7 +50,7 @@ function CheckPage() {
     const orderNumber = generateOrderNumber();
     axios.post('http://localhost:3000/completedOrders', { firstname, company, street, apartament, town, phone, email, orderNumber, cartitems, status } )
     localStorage.removeItem('carditems')
-    navigate(`/completed-order?${orderNumber}`)
+    navigate(`/completed-order/${orderNumber}`)
   }
 
   return (
@@ -157,7 +157,7 @@ function CheckPage() {
                 <label htmlFor="billingPayment">
                     <div className="billing__bank">
                         <div className="billing__bank_left">
-                        <input type="radio" name="billingPayment" id="" />
+                        <input type="radio" name="billingPayment" id="" required />
                         <span className="billing__bank_span">Bank</span>
                         </div>
 
@@ -165,7 +165,7 @@ function CheckPage() {
                     </div>
 
                     <div className="billing__cash">
-                        <input type="radio" name="billingPayment" />
+                        <input type="radio" name="billingPayment" required />
                         <span className="billing__cash_span">Cash on delivery</span>
                     </div>
 
