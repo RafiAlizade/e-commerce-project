@@ -346,3 +346,8 @@ cursor: pointer;
     object-fit: contain;
     width: 55%;
   }
+
+  .flashsale__products .slick-list {
+    min-height: 400px;
+  }
+  

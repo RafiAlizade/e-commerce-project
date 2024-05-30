@@ -44,28 +44,63 @@ function BestSelling() {
   const handleAddToWishlist = (e, product) => {
     e.stopPropagation();
     const wishlist = getWishlist();
-    const isProductInWishlist = wishlist.some((item) => item.id === product.id);
+    const selectedColorIndex = selectedColors[product.id] || 0;
+    const color = product.colors ? product.colors[selectedColorIndex] : null;
+    const differentColor = product.colors ? true : false;
+    const isProductInWishlist = wishlist.some(
+      (item) =>
+        item.id === product.id &&
+        (!item.selectedColorIndex ||
+          item.selectedColorIndex === selectedColorIndex)
+    );
 
     if (isProductInWishlist) {
-      removeFromWishlist(product.id);
-      setWishlist(wishlist.filter((item) => item.id !== product.id));
+      removeFromWishlist(product.id, selectedColorIndex);
+      setWishlist(
+
+        wishlist.filter((item) => !(item.id === product.id && (!item.selectedColorIndex || item.selectedColorIndex === selectedColorIndex))))
     } else {
-      addToWishlist(product);
-      setWishlist([...wishlist, product]);
+      const productToAdd = color
+        ? {
+          ...product,
+          differentColor,
+          selectedColorIndex,
+          selectedColor: color,
+        }
+        : { ...product };
+      addToWishlist(productToAdd);
+      setWishlist([...wishlist, productToAdd]);
     }
   };
 
   const handleAddToCard = (e, product) => {
     e.stopPropagation();
-    const carditems = getCardItems();
-    const isProductInCard = carditems.some((item) => item.id === product.id);
+    const cardItems = getCardItems();
+    const selectedColorIndex = selectedColors[product.id] || 0;
+    const color = product.colors ? product.colors[selectedColorIndex] : null;
+    const differentColor = product.colors ? true : false;
+    const isProductInCard = cardItems.some(
+      (item) =>
+        item.id === product.id &&
+        (!item.selectedColorIndex ||
+          item.selectedColorIndex === selectedColorIndex)
+    );
 
     if (isProductInCard) {
-      removeFromCard(product.id);
-      setCart(carditems.filter((item) => item.id !== product.id));
+      console.log(product.id, selectedColorIndex);
+      removeFromCard(product.id, selectedColorIndex);
+      setCart(cardItems.filter((item) => !(item.id === product.id && (!item.selectedColorIndex || item.selectedColorIndex === selectedColorIndex))));
     } else {
-      addToCard(product);
-      setCart([...cart, product]);
+      const productToAdd = color
+        ? {
+          ...product,
+          differentColor,
+          selectedColorIndex,
+          selectedColor: color,
+        }
+        : { ...product };
+      addToCard(productToAdd);
+      setCart([...cart, productToAdd]);
     }
   };
 
@@ -74,12 +109,22 @@ function BestSelling() {
     setCart(getCardItems());
   }, [bestSelling]);
 
-  const isInCartlist = (product) => {
-    return cart.some(item => item.id === product.id);
+  const isInCartlist = (product, selectedColorIndex) => {
+    return cart.some(
+      (item) =>
+        item.id === product.id &&
+        (!item.selectedColorIndex ||
+          item.selectedColorIndex === selectedColorIndex)
+    );
   };
-  
-  const isInWishlist = (product) => {
-    return wishlist.some(item => item.id === product.id);
+
+  const isInWishlist = (product, selectedColorIndex) => {
+    return wishlist.some(
+      (item) =>
+        item.id === product.id &&
+        (!item.selectedColorIndex ||
+          item.selectedColorIndex === selectedColorIndex)
+    );
   };
 
   const navigate = useNavigate();
@@ -87,6 +132,11 @@ function BestSelling() {
   const clickToShow = (product) => {
     return navigate(product.id)
   }
+
+  const handleColorSelect = (e, productId, colorIndex) => {
+    e.stopPropagation();
+    setSelectedColors({ ...selectedColors, [productId]: colorIndex });
+  };
 
   return (
     <section className="app__bestselling">
@@ -111,6 +161,7 @@ function BestSelling() {
           <div className="bestselling__bottom">
             <div className="bestselling__container">
               {randomProducts.map((product, index) => {
+                const selectedColorIndex = selectedColors[product.id] || 0;
                 return (
                   <div className="bestselling__box" key={index} onClick={() => clickToShow(product)}>
                     {product.discount && <div className="bestselling__discountprice">
@@ -128,14 +179,25 @@ function BestSelling() {
                       </button>
                     </div>
                     <div className="product__image">
-                      <img src={product.image} />
-                      <button
-                        className="bestselling__addcard"
-                        onClick={(e) => handleAddToCard(e, product)}
-                      >
-                       {isInCartlist(product) ? 'Remove from Card' : 'Add to Card'}
-                      </button>
-                    </div>
+                        {product.multipleColors && product.colors.length > 0 ? (
+                          <img
+                            src={
+                              product.colors[selectedColorIndex].coloredImage
+                            }
+                            alt={product.colors[selectedColorIndex].name}
+                          />
+                        ) : (
+                          <img src={product.image} alt={product.name} />
+                        )}
+                        <button
+                          className="bestselling__addcard"
+                          onClick={(e) => handleAddToCard(e, product)}
+                        >
+                          {isInCartlist(product, selectedColorIndex)
+                            ? "Remove from Card"
+                            : "Add to Card"}
+                        </button>
+                      </div>
                     <div className="bestselling__description">
                       <h5 className="bestselling__name">{product.name}</h5>
                       <div className="bestselling__prices">
@@ -161,6 +223,33 @@ function BestSelling() {
                           ({product.feedbackCount})
                         </span>
                       </div>
+
+                      {product.multipleColors && product.colors.length > 0 ? (
+                          <div className="product__colorselect">
+                            {product.colors &&
+                              product.colors.length > 0 &&
+                              product.colors.map((color, index) => (
+                                <span
+                                  key={index}
+                                  className={`product__color ${color.name}`}
+                                  style={{
+                                    backgroundColor: `${color.name}`,
+                                    width: "1rem",
+                                    height: "1rem",
+                                    borderRadius: "50%",
+                                    border:
+                                      selectedColorIndex === index
+                                        ? "0.13rem solid rgb(0, 0, 0)"
+                                        : "none",
+                                    cursor: "pointer",
+                                  }}
+                                  onClick={(e) =>
+                                    handleColorSelect(e, product.id, index)
+                                  }
+                                ></span>
+                              ))}
+                          </div>
+                        ) : null}
                     </div>
                   </div>
                 );

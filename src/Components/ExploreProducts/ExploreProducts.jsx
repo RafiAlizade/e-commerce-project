@@ -62,16 +62,16 @@ function ExploreProducts() {
     if (isProductInWishlist) {
       removeFromWishlist(product.id, selectedColorIndex);
       setWishlist(
-        
+
         wishlist.filter((item) => !(item.id === product.id && (!item.selectedColorIndex || item.selectedColorIndex === selectedColorIndex))))
     } else {
       const productToAdd = color
         ? {
-            ...product,
-            differentColor,
-            selectedColorIndex,
-            selectedColor: color,
-          }
+          ...product,
+          differentColor,
+          selectedColorIndex,
+          selectedColor: color,
+        }
         : { ...product };
       addToWishlist(productToAdd);
       setWishlist([...wishlist, productToAdd]);
@@ -98,11 +98,11 @@ function ExploreProducts() {
     } else {
       const productToAdd = color
         ? {
-            ...product,
-            differentColor,
-            selectedColorIndex,
-            selectedColor: color,
-          }
+          ...product,
+          differentColor,
+          selectedColorIndex,
+          selectedColor: color,
+        }
         : { ...product };
       addToCard(productToAdd);
       setCart([...cart, productToAdd]);
@@ -132,7 +132,8 @@ function ExploreProducts() {
     );
   };
 
-  const handleColorSelect = (productId, colorIndex) => {
+  const handleColorSelect = (e, productId, colorIndex) => {
+    e.stopPropagation();
     setSelectedColors({ ...selectedColors, [productId]: colorIndex });
   };
 
@@ -272,8 +273,8 @@ function ExploreProducts() {
                                         : "none",
                                     cursor: "pointer",
                                   }}
-                                  onClick={() =>
-                                    handleColorSelect(product.id, index)
+                                  onClick={(e) =>
+                                    handleColorSelect(e, product.id, index)
                                   }
                                 ></span>
                               ))}

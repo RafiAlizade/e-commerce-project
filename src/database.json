@@ -10,7 +10,12 @@
       "colors:": [],
       "price": 360,
       "bestselling": true,
-      "sizes": ["XS", "S", "M", "L"],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
       "discount": true,
       "flashsale": false,
       "discountedPrice": 260,
