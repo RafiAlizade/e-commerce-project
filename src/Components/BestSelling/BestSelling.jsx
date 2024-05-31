@@ -1,4 +1,3 @@
-import React from "react";
 import "./BestSelling.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -130,7 +129,7 @@ function BestSelling() {
   const navigate = useNavigate();
 
   const clickToShow = (product) => {
-    return navigate(product.id)
+    return navigate(`product/${product.id}`)
   }
 
   const handleColorSelect = (e, productId, colorIndex) => {
@@ -170,7 +169,13 @@ function BestSelling() {
                     <div className="bestselling__buttons_abs">
                       <button
                         className="bestselling__wishlist_btn"
-                        style={{ backgroundColor: isInWishlist ? 'rgb(219, 68, 68)' : 'rgb(255, 255, 255)', color: isInWishlist ? '#fff' : '#000' , transition: 'ease-in-out .2s'  }} onClick={() => handleAddToWishlist(product)}
+                        style={{ backgroundColor: isInWishlist(
+                          product,
+                          selectedColorIndex
+                        ) ? 'rgb(219, 68, 68)' : 'rgb(255, 255, 255)', color: isInWishlist(
+                          product,
+                          selectedColorIndex
+                        ) ? '#fff' : '#000' , transition: 'ease-in-out .2s'  }} onClick={(e) => handleAddToWishlist(e, product)}
                       >
                         <Heart />
                       </button>

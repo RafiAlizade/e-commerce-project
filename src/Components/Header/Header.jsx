@@ -162,7 +162,7 @@ useEffect(() => {
                   >
                     <ul className="header__account_list">
                       <li>
-                        <a href="#">
+                        <a href="/manage/account">
                           <Person />
                           <span>Manage My Account</span>
                         </a>

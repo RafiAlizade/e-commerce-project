@@ -10,6 +10,7 @@ import Wishlist from './Pages/Wishlist/Wishlist'
 import Cart from './Pages/Cart/Cart'
 import CheckOut from './Pages/CheckOut/CheckOut'
 import OrderConfirm from './Components/OrderConfirm/OrderConfirm'
+import ProductPage from './Components/ProductPage/ProductPage'
 import './assets/fonts/Poppins-Medium.ttf'
 import './assets/fonts/Poppins-Regular.ttf'
 import './assets/fonts/Poppins-Bold.ttf'
@@ -29,7 +30,7 @@ function App() {
         <Route path='/cart' element={< Cart />} />
         <Route path='/checkout' element={< CheckOut />} />
         <Route path='/completed-order/:ordernumber' element={< OrderConfirm />} />
-        <Route path='/product/:id' element={< OrderConfirm />} />
+        <Route path='/product/:id/:colorIndex?' element={<ProductPage />} />
         <Route path='*' element={< Page404 />} />
       </Routes>
     </>

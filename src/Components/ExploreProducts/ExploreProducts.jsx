@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./ExploreProducts.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -75,6 +75,17 @@ function ExploreProducts() {
         : { ...product };
       addToWishlist(productToAdd);
       setWishlist([...wishlist, productToAdd]);
+    }
+  };
+
+  const navigate = useNavigate();
+
+  const clickToShow = (product) => {
+    const selectedColorIndex = selectedColors[product.id] || 0;
+    if (product.multipleColors) {
+      return navigate(`product/${product.id}/${selectedColorIndex}`);
+    } else {
+      return navigate(`product/${product.id}`);
     }
   };
 
@@ -177,7 +188,7 @@ function ExploreProducts() {
                 {products.map((product, index) => {
                   const selectedColorIndex = selectedColors[product.id] || 0;
                   return (
-                    <div className="explore__box" key={index}>
+                    <div className="explore__box" key={index} onClick={() => clickToShow(product)}>
                       <div
                         className="explore__isnew"
                         style={

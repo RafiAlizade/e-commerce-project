@@ -42,10 +42,14 @@ function CartPage() {
     calculateSubtotal();
   }, [cartItems]);
 
-  const removeFromCards = (productId) => {
-    removeFromCard(productId.id);
+  const removeFromCards = (productId, selectedColorIndex) => {
+    removeFromCard(productId.id, selectedColorIndex);
     const refreshedItems = getCardItems();
     setCartItems(refreshedItems);
+  };
+
+  const capitalizeFirstLetter = (string) => {
+    return string[0].toUpperCase() + string.slice(1);
   };
 
 
@@ -73,21 +77,41 @@ function CartPage() {
                 </div>
 
                 <div className="cart__list_container">
-                  {cartItems.map((cartitem, index) => (
+                  {cartItems.map((cartitem, index) => {
+                const multipleColorType = cartitem.multipleColors;
+
+                    return (
+                  
                     <div className="cart__list_box" key={index}>
                       <div className="cart__list_product">
                         <div className="cart__list_img">
-                          <img src={cartitem.image} alt="" />
+                        {cartitem.multipleColors && cartitem.colors.length > 0 ? (
+                          <img
+                            src={
+                              cartitem.colors[cartitem.selectedColorIndex].coloredImage
+                            }
+                            alt={cartitem.colors[cartitem.selectedColorIndex].name}
+                          />
+                        ) : (
+                          <img src={cartitem.image} alt={cartitem.name} />
+                        )}
                         </div>
 
                         <button
                           className="cart__list_remove"
-                          onClick={() => removeFromCards(cartitem)}
+                          onClick={() => removeFromCards(cartitem, cartitem.selectedColorIndex )}
                         >
                           <XLg />
                         </button>
 
-                        <div className="cart__list_name">{cartitem.name}</div>
+                        <h5 className="cart__list_name">
+                        {multipleColorType
+                          ? cartitem.selectedColor &&
+                            `${cartitem.name} ${capitalizeFirstLetter(
+                              cartitem.selectedColor.name
+                            )}`
+                          : cartitem.name}
+                        </h5>
                       </div>
 
                       <span className="cart__list_price">
@@ -121,7 +145,7 @@ function CartPage() {
                           : cartitem.price}
                       </span>
                     </div>
-                  ))}
+                  )})}
                 </div>
               </div>
 

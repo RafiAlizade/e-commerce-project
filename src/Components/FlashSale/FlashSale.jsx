@@ -2,7 +2,7 @@ import "./FlashSale.css";
 import { useState, useEffect, useRef } from "react";
 import CountDown from "count-down-react";
 import { ArrowRightShort, ArrowLeftShort, StarFill, Heart, Eye } from 'react-bootstrap-icons';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -161,6 +161,12 @@ function FlashSale() {
         setSelectedColors({ ...selectedColors, [productId]: colorIndex });
       };
 
+      const navigate = useNavigate();
+
+  const clickToShow = (product) => {
+    return navigate(`product/${product.id}`)
+  }
+
     const settings = {
         dots: false,
         infinite: true,
@@ -227,7 +233,7 @@ function FlashSale() {
                                 {randomProducts.map((product, index) => {
                 const selectedColorIndex = selectedColors[product.id] || 0;
                                     return (
-                                        <div className="flashsale__box" key={index}>
+                                        <div className="flashsale__box" key={index} onClick={() => clickToShow(product)}>
                                             <div className="flashsale__discountprice">
                                                 -{product.discountRate}%
                                             </div>

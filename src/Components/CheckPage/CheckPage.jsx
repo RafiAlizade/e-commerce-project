@@ -37,6 +37,10 @@ function CheckPage() {
 
   const navigate = useNavigate();
 
+  const capitalizeFirstLetter = (string) => {
+    return string[0].toUpperCase() + string.slice(1);
+  };
+
 
   const postInfo = () => {
     const firstname = document.querySelector('.billing_firstname_input').value;
@@ -48,7 +52,19 @@ function CheckPage() {
     const email = document.querySelector('.billing_email_input').value;
     const status = "Order Confirmed"
     const orderNumber = generateOrderNumber();
-    axios.post('http://localhost:3000/completedOrders', { firstname, company, street, apartament, town, phone, email, orderNumber, cartitems, status } )
+    
+    const itemsProperties = cartitems.map(item => ({
+      name: item.name,
+      image: item.image,
+      category: item.category,
+      price: item.price,
+      subtotal: item.subtotal,
+      quantity: item.quantity,
+      selectedColorName: item.selectedColor ? item.selectedColor.name : null,
+      selectedColorImage: item.selectedColor ? item.selectedColor.coloredImage : null,
+    }));
+
+    axios.post('http://localhost:3000/completedOrders', { firstname, company, street, apartament, town, phone, email, orderNumber, itemsProperties, status } )
     localStorage.removeItem('carditems')
     navigate(`/completed-order/${orderNumber}`)
   }
@@ -112,13 +128,32 @@ function CheckPage() {
 
             <div className="billing__right">
               <div className="billing__products">
-                {cartitems.map((item, index) => (
+                {cartitems.map((item, index) => {
+                const multipleColorType = item.multipleColors;
+
+                return (
                   <div className="billing__products_box" key={index}>
                     <div className="billing__product_left">
                         <div className="billing__pruduct_imgbox">
-                        <img src={item.image} alt={item.name} />
+                        {item.multipleColors && item.colors.length > 0 ? (
+                          <img
+                            src={
+                              item.colors[item.selectedColorIndex].coloredImage
+                            }
+                            alt={item.colors[item.selectedColorIndex].name}
+                          />
+                        ) : (
+                          <img src={item.image} alt={item.name} />
+                        )}
                         </div>
-                      <span className="billing__product_name">{item.name}</span>
+                      <span className="billing__product_name">
+                      {multipleColorType
+                          ? item.selectedColor &&
+                            `${item.name} ${capitalizeFirstLetter(
+                              item.selectedColor.name
+                            )}`
+                          : item.name}
+                      </span>
                     </div>
 
                     <span className="billing__product_total">
@@ -129,7 +164,7 @@ function CheckPage() {
                         : item.subtotal}
                     </span>
                   </div>
-                ))}
+                                  )})}
               </div>
 
               <div className="billing__total_box">

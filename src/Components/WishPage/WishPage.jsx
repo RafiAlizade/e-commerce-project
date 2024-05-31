@@ -111,7 +111,6 @@ function WishPage() {
     }
   };
 
-  const wishlistCount = getWishlist();
 
   const capitalizeFirstLetter = (string) => {
     return string[0].toUpperCase() + string.slice(1);
@@ -155,6 +154,7 @@ function WishPage() {
             <div className="wishlist__container">
               {wishlist.map((wishs, index) => {
                 const multipleColorType = wishs.multipleColors;
+                const colorName = multipleColorType ? wishs.selectedColor : null;
                 return (
                   <div className="wishlist__box" key={index}>
                     <div className="wishlist__buttons_abs">
@@ -188,13 +188,13 @@ function WishPage() {
                           handleAddToCard(
                             e,
                             wishs,
-                            multipleColorType ? selectedColors[wishs.id] : ""
+                            multipleColorType ? wishs.selectedColorIndex : 0
                           )
                         }
                       >
                         {isInCartlist(
                           wishs,
-                          multipleColorType ? selectedColors[wishs.id] : 0
+                          multipleColorType ? wishs.selectedColorIndex : 0
                         )
                           ? "Remove from Cart"
                           : "Add to Cart"}
