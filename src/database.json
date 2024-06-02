@@ -718,39 +718,5 @@
     }
   ],
   "completedOrders": [
-    {
-      "id": "9bce",
-      "firstname": "ALİMDARIN",
-      "company": "",
-      "street": "OĞLANLIĞI",
-      "apartament": "",
-      "town": "ALİMDAREÜ",
-      "phone": "+994552336811",
-      "email": "refi@gmail.com",
-      "orderNumber": "7954958673326535",
-      "itemsProperties": [
-        {
-          "name": "Kids Electric Car",
-          "image": "/src/assets/products/kidselectriccars.svg",
-          "category": "electronics",
-          "price": 960,
-          "subtotal": 0,
-          "quantity": 1,
-          "selectedColorName": "green",
-          "selectedColorImage": "/src/assets/products/kidselectriccars-green.jpg"
-        },
-        {
-          "name": "Kids Electric Car",
-          "image": "/src/assets/products/kidselectriccars.svg",
-          "category": "electronics",
-          "price": 960,
-          "subtotal": 0,
-          "quantity": 1,
-          "selectedColorName": "red",
-          "selectedColorImage": "/src/assets/products/kidselectriccars.svg"
-        }
-      ],
-      "status": "Order Confirmed"
-    }
   ]
 }
