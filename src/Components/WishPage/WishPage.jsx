@@ -10,7 +10,7 @@ import {
   removeFromCard,
 } from "./../../utils/wishlistUtils";
 import { Trash, Shop, Eye } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function WishPage() {
   const [products, setProducts] = useState([]);
@@ -130,6 +130,22 @@ function WishPage() {
     );
   };
 
+  const navigate = useNavigate();
+
+  const clickToShow = (product) => {
+    const selectedColorIndex = selectedColors[product.id] || 0;
+    if (product.multipleColors) {
+      return navigate(`./../product/${product.id}/${selectedColorIndex}`);
+    } else {
+      return navigate(`./../product/${product.id}`);
+    }
+  };
+
+  const allToBag = () => {
+    const data = [...card, ...wishlist];
+    localStorage.setItem('carditems', JSON.stringify(data))
+  }
+
   const handleColorSelect = (e, productId, colorIndex) => {
     e.stopPropagation();
     setSelectedColors({ ...selectedColors, [productId]: colorIndex });
@@ -145,7 +161,7 @@ function WishPage() {
               </div>
 
               <div className="wishlist__tobag">
-                <Link to="/cart" className="wishlist__bagtext">
+                <Link to="/cart" className="wishlist__bagtext" onClick={allToBag}>
                   Move All To Bag
                 </Link>
               </div>
@@ -243,7 +259,7 @@ function WishPage() {
                 const selectedColorIndex = selectedColors[products.id] || 0;
 
                 return (
-                  <div className="wishlist__box" key={index}>
+                  <div className="wishlist__box" key={index} onClick={() => clickToShow(products)}>
                     <div className="wishlist__buttons_abs">
                       <button className="wishlist__remove_btn">
                         <Eye />

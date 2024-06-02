@@ -129,8 +129,13 @@ function BestSelling() {
   const navigate = useNavigate();
 
   const clickToShow = (product) => {
-    return navigate(`product/${product.id}`)
-  }
+    const selectedColorIndex = selectedColors[product.id] || 0;
+    if (product.multipleColors) {
+      return navigate(`product/${product.id}/${selectedColorIndex}`);
+    } else {
+      return navigate(`product/${product.id}`);
+    }
+  };
 
   const handleColorSelect = (e, productId, colorIndex) => {
     e.stopPropagation();

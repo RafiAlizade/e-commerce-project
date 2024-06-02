@@ -163,9 +163,14 @@ function FlashSale() {
 
       const navigate = useNavigate();
 
-  const clickToShow = (product) => {
-    return navigate(`product/${product.id}`)
-  }
+      const clickToShow = (product) => {
+        const selectedColorIndex = selectedColors[product.id] || 0;
+        if (product.multipleColors) {
+          return navigate(`product/${product.id}/${selectedColorIndex}`);
+        } else {
+          return navigate(`product/${product.id}`);
+        }
+      };
 
     const settings = {
         dots: false,
