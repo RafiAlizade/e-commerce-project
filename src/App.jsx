@@ -11,17 +11,14 @@ import Cart from './Pages/MainPage/Cart/Cart'
 import CheckOut from './Pages/MainPage/CheckOut/CheckOut'
 import OrderConfirm from './Components/MainPage/OrderConfirm/OrderConfirm'
 import ProductPage from './Components/MainPage/ProductPage/ProductPage'
+import AdminLogin from './Components/AdminPage/AdminLogin/AdminLogin'
 import './assets/fonts/Poppins-Medium.ttf'
 import './assets/fonts/Poppins-Regular.ttf'
 import './assets/fonts/Poppins-Bold.ttf'
 import './assets/fonts/Poppins-SemiBold.ttf'
-import { Provider } from 'react-redux'
-import store from './redux/store/store'
 
 function App() {
-  return (
-    <Provider store={store}>
-      <Routes>
+  return (      <Routes>
         <Route path='/' element={< Home />} />
         <Route path='/signup' element={< SignUp />} />
         <Route path='/login' element={< SignIn />} />
@@ -29,12 +26,12 @@ function App() {
         <Route path='/contact' element={< Contact />} />
         <Route path='/wishlist' element={< Wishlist />} />
         <Route path='/cart' element={< Cart />} />
+        <Route path='/admin' element={< AdminLogin />} />
         <Route path='/checkout' element={< CheckOut />} />
         <Route path='/completed-order/:ordernumber' element={< OrderConfirm />} />
         <Route path='/product/:id/:colorIndex?' element={<ProductPage />} />
         <Route path='*' element={< Page404 />} />
       </Routes>
-    </Provider>
   )
 }
 

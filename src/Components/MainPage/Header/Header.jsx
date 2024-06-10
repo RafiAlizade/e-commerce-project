@@ -162,11 +162,7 @@ useEffect(() => {
                   >
                     <ul className="header__account_list">
                       <li>
-<<<<<<< Updated upstream:src/Components/MainPage/Header/Header.jsx
                         <a href="/manage/account">
-=======
-                        <a href="#">
->>>>>>> Stashed changes:src/Components/Header/Header.jsx
                           <Person />
                           <span>Manage My Account</span>
                         </a>

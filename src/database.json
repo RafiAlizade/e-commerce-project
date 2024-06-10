@@ -529,44 +529,6 @@
       "linkTwitter": "https://twitter.com/",
       "linkInstagram": "https://instagram.com/",
       "linkLinkedin": "https://linkedin.com/",
-      "photo": "/src/assets/personal/image46.svg",
-      "id": "c2bb"
-    },
-    {
-      "name": "Emma Watson",
-      "job": "Managing Director",
-      "linkTwitter": "https://twitter.com/",
-      "linkInstagram": "https://instagram.com/",
-      "linkLinkedin": "https://linkedin.com/",
-      "photo": "/src/assets/personal/image51.svg",
-      "id": "4c89"
-    },
-    {
-      "name": "Will Smith",
-      "job": "Product Designer",
-      "linkTwitter": "https://twitter.com/",
-      "linkInstagram": "https://instagram.com/",
-      "linkLinkedin": "https://linkedin.com/",
-      "photo": "/src/assets/personal/image47.svg",
-      "id": "32f9"
-    },
-    {
-      "name": "Andrew Houston",
-      "job": "Product Manager",
-      "linkTwitter": "https://twitter.com/",
-      "linkInstagram": "https://instagram.com/",
-      "linkLinkedin": "https://linkedin.com/",
-      "photo": "/src/assets/personal/image46.svg",
-      "id": "f4f9"
-    }
-  ],
-  "personals": [
-    {
-      "name": "Tom Cruise",
-      "job": "Founder & Chairman",
-      "linkTwitter": "https://twitter.com/",
-      "linkInstagram": "https://instagram.com/",
-      "linkLinkedin": "https://linkedin.com/",
       "photo": "./src/assets/personal/image46.svg" 
     },
     {
@@ -622,6 +584,15 @@
       "adImage": "/src/assets/featured/Frame706.svg",
       "linkTo": "./link",
       "id": "830c"
+    }
+  ],
+  "admin": [
+    {
+      "name": "Rafi",
+      "surname": "Alizade",
+      "permission": "admin",
+      "email": "admintest@gmail.com",
+      "password": "admintest1"
     }
   ],
   "advertising": [

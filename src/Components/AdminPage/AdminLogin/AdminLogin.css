@@ -1,0 +1,129 @@
+.app__main {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.admin__login {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+}
+
+.a_login__inner {
+    width: 30%;
+}
+
+.a_login__container {
+    width: 100%;
+    border-radius: 1.25rem;
+    background: rgb(255, 255, 255);
+    padding: 3rem 4.5rem 3rem 4.5rem;
+}
+
+.a_login__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    >label {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: .3rem;
+    }
+}
+
+.a_login__email {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    box-sizing: border-box;
+    border: 0.06rem solid rgb(208, 213, 221);
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.a_login__email:focus {
+    border: 0.15rem solid rgb(209, 233, 255);
+}
+
+.a_login__password {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    outline: none;
+}
+
+.a_login__showpass {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a_login__password input {
+    width: 90%;
+    padding: 0.75rem 1rem 0.75rem 0rem;
+    border: none;
+    outline: none;
+}
+
+
+.a_login__loginbtn {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: rgb(21, 112, 239);
+    border: none;
+    outline: none;
+    color: rgb(252, 252, 253);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.a__login_label {
+    color: rgb(52, 64, 84);
+    font-family: Poppins;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.swal2-title {
+    font-family: Poppins;
+    font-size: .9rem !important;
+    font-weight: normal !important;
+}
+
+.a_login__h2 {
+    color: rgb(16, 24, 40);
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
